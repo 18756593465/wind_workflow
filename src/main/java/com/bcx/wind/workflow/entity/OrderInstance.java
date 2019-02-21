@@ -91,7 +91,7 @@ public class OrderInstance {
     }
 
     public Map<String, Object> getVariableMap() {
-        if(!this.variable.isEmpty()){
+        if(!this.variableMap.isEmpty()){
             return this.variableMap;
         }
 

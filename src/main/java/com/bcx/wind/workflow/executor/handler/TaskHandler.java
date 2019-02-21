@@ -18,10 +18,13 @@ import com.bcx.wind.workflow.helper.ObjectHelper;
 import com.bcx.wind.workflow.helper.TimeHelper;
 import com.bcx.wind.workflow.message.MessageHelper;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static com.bcx.wind.workflow.core.constant.Constant.JSON;
+import static com.bcx.wind.workflow.core.constant.OrderVariableKey.TASK_APPROVE_USER;
 import static com.bcx.wind.workflow.core.constant.WorkflowOperateConstant.BUILD;
 import static com.bcx.wind.workflow.message.MsgConstant.w011;
 
@@ -58,9 +61,7 @@ public class TaskHandler extends BaseHandler implements Handler{
         }
 
         boolean createNewTask = false;
-        if(ObjectHelper.isEmpty(approveUsers) && WorkflowOperateConstant.REJECT.equals(actuator.getOperate().name())){
-
-        }
+        approveUsers = addApproveUser(approveUsers);
 
         Assert.notEmpty("submitWorkflow require parameters orderId user approveUsers has null!", approveUsers);
         for(ApproveUser user : approveUsers){
@@ -99,6 +100,29 @@ public class TaskHandler extends BaseHandler implements Handler{
     }
 
 
+    @SuppressWarnings("unchecked")
+    private List<ApproveUser> addApproveUser(List<ApproveUser> approveUsers){
+        if(ObjectHelper.isEmpty(approveUsers) && WorkflowOperateConstant.REJECT.equals(actuator.getOperate().name())){
+            Object userObjs = workflow().getOrderInstance().getVariableMap().get(TASK_APPROVE_USER);
+
+            if (!ObjectHelper.isEmpty(userObjs)) {
+                Map<String,List<String>> users = JsonHelper.coverObject(userObjs,Map.class,String.class,List.class);
+                for(Map.Entry<String,List<String>> user : users.entrySet()){
+                    String nodeId = user.getKey();
+                    List<String> userIds = user.getValue();
+                    List<DefaultUser> defaultUsers = new LinkedList<>();
+                    for(String userId :userIds){
+                        defaultUsers.add(new DefaultUser().setUserId(userId));
+                    }
+                    approveUsers.add(new ApproveUser().setNodeId(nodeId).setApproveUsers(defaultUsers));
+                }
+            }
+        }
+
+        return  approveUsers;
+    }
+
+
 
     private void addNowTaskInstance(TaskInstance instance) {
         if(!ObjectHelper.isEmpty(this.task)) {
@@ -122,6 +146,8 @@ public class TaskHandler extends BaseHandler implements Handler{
             }
         }
     }
+
+
 
 
     private void createActiveHistory(boolean jointly,String taskId){

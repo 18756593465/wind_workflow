@@ -66,4 +66,13 @@ public class MsgConstant {
     /**对不起，您输入的参数submitNode->【${0}】不可被提交，请选择其他任务节点**/
     public static final String w020 = "w020";
 
+    /**对不起，当前节点【${0}】为【${1}】,禁止退回**/
+    public static final String w021 = "w021";
+
+    /**对不起，驳回节点【${0}】为【${1}】,禁止退回**/
+    public static final String w022 = "w022";
+
+    /**对不起，驳回节点【${0}】不存在，无法驳回**/
+    public static final String w023 = "w023";
+
 }

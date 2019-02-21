@@ -3,7 +3,6 @@ package com.bcx.wind.workflow.executor;
 import com.bcx.wind.workflow.WorkflowEngine;
 import com.bcx.wind.workflow.access.QueryFilter;
 import com.bcx.wind.workflow.core.Actuator;
-import com.bcx.wind.workflow.core.constant.NodeType;
 import com.bcx.wind.workflow.core.flow.*;
 import com.bcx.wind.workflow.core.handler.*;
 import com.bcx.wind.workflow.core.pojo.Task;
@@ -22,9 +21,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.bcx.wind.workflow.core.constant.NodeName.*;
+import static com.bcx.wind.workflow.core.constant.NodeName.PROCESS;
+import static com.bcx.wind.workflow.core.constant.NodeName.START;
 import static com.bcx.wind.workflow.message.MsgConstant.*;
-import static com.bcx.wind.workflow.message.MsgConstant.w020;
 
 /**
  * @author zhanglei
@@ -36,7 +35,6 @@ public abstract class BaseExecutor implements Executor{
      * 执行数据
      */
     protected Actuator actuator;
-
 
     public BaseExecutor(Actuator actuator){
         this.actuator = actuator;
@@ -59,8 +57,6 @@ public abstract class BaseExecutor implements Executor{
     protected WorkflowVariable variable(){
         return this.actuator.getVariable();
     }
-
-
 
 
     /**
@@ -104,7 +100,6 @@ public abstract class BaseExecutor implements Executor{
 
     @Override
     public Workflow reject(WorkflowVariable variable) {
-        addWorkflow(variable);
         this.executor();
         return this.actuator.getWorkflow();
     }
@@ -142,6 +137,7 @@ public abstract class BaseExecutor implements Executor{
         this.executor();
         return this.actuator.getWorkflow();
     }
+
 
     @Override
     public <T extends CompleteHandler> Workflow complete(WorkflowVariable variable, T handler) {
@@ -206,7 +202,7 @@ public abstract class BaseExecutor implements Executor{
 
             Assert.isTrue(MessageHelper.getMsg(w020), nodeModel instanceof ScribeTaskNode || nodeModel instanceof CustomNode);
             TaskNode node = (TaskNode) nodeModel;
-            Assert.isTrue(MessageHelper.getMsg(w020), node.isInAnd() || node.isInOr() || node.isJointly());
+            Assert.isTrue(MessageHelper.getMsg(w020), node.isInAnd() || node.isInOr());
             taskNodes.add(node);
             return taskNodes;
         }

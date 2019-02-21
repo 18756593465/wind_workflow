@@ -100,7 +100,6 @@ public abstract class BaseExecutor implements Executor{
 
     @Override
     public Workflow reject(WorkflowVariable variable) {
-        addWorkflow(variable);
         this.executor();
         return this.actuator.getWorkflow();
     }

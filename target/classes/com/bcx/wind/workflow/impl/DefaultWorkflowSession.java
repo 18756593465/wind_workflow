@@ -222,11 +222,11 @@ public  class DefaultWorkflowSession  implements WorkflowSession {
     }
 
     @Override
-    public Workflow reject(String orderId, DefaultUser user) {
+    public Workflow reject(String orderId,String returnNode, DefaultUser user) {
         WorkflowVariable variable = new WorkflowVariable()
                 .setOrderId(orderId)
-                .setUser(user);
-
+                .setUser(user)
+                .setSubmitNode(returnNode);
         return reject(variable);
     }
 
@@ -245,10 +245,11 @@ public  class DefaultWorkflowSession  implements WorkflowSession {
     }
 
     @Override
-    public <T extends RejectHandler> Workflow reject(String orderId, DefaultUser user, T handler) {
+    public <T extends RejectHandler> Workflow reject(String orderId,String returnNode, DefaultUser user, T handler) {
         WorkflowVariable variable = new WorkflowVariable()
                 .setOrderId(orderId)
-                .setUser(user);
+                .setUser(user)
+                .setSubmitNode(returnNode);
         return reject(variable,handler);
     }
 

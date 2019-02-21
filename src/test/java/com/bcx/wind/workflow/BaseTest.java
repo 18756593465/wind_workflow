@@ -23,6 +23,6 @@ public class BaseTest {
 
 
     protected void commit(){
-        AccessTransactionManager.getInstance().commit();
+//        AccessTransactionManager.getInstance().commit();
     }
 }

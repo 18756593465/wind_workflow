@@ -1,6 +1,8 @@
 package com.bcx.wind.workflow.executor;
 
 import com.bcx.wind.workflow.core.Actuator;
+import com.bcx.wind.workflow.core.constant.WorkflowOperate;
+import com.bcx.wind.workflow.core.constant.WorkflowOperateConstant;
 import com.bcx.wind.workflow.core.flow.NodeModel;
 import com.bcx.wind.workflow.core.pojo.Task;
 
@@ -35,21 +37,20 @@ public class SubmitExecutor extends BaseExecutor {
 
 
 
-
     private void buildWorkflow(){
         //查询流程实例
-        buildOrderInstance();
+        if(WorkflowOperateConstant.SUBMIT.equals(this.actuator.getOperate().name())) {
+            buildOrderInstance();
 
-        this.actuator.getWorkflow().setVariable(variable()).setApproveUsers(variable().getApproveUsers())
-                .setSystem(variable().getSystem())
-                .setBusinessId(variable().getBusinessId())
-                .setUser(variable().getUser());
+            this.actuator.getWorkflow().setVariable(variable()).setApproveUsers(variable().getApproveUsers())
+                    .setSystem(variable().getSystem())
+                    .setBusinessId(variable().getBusinessId())
+                    .setUser(variable().getUser());
 
-        //当前任务
-        buildCurTask();
+            //当前任务
+            buildCurTask();
+        }
     }
-
-
 
 
 

@@ -32,4 +32,12 @@ public class NodeName {
     public static final String ASSIGNEE = "assignee";
 
     public static final String PROCESS = "process";
+
+    public static final String FORK_TASK = "分支任务";
+
+    public static final String JOINTLY_TASK = "会签任务";
+
+    public static final String SUB_SCRIBE_TASK = "订阅任务";
+
+    public static final String SIMPLE_TASK = "普通任务";
 }

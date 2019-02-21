@@ -103,7 +103,7 @@ public interface WorkflowSession {
      * @param user     当前用户
      * @return         退回结果
      */
-    Workflow  reject(String orderId,DefaultUser user);
+    Workflow  reject(String orderId,String returnNode,DefaultUser user);
 
 
     /**
@@ -121,7 +121,7 @@ public interface WorkflowSession {
      * @param user     当前用户
      * @return         退回结果
      */
-    <T extends RejectHandler>Workflow  reject(String orderId,DefaultUser user,T handler);
+    <T extends RejectHandler>Workflow  reject(String orderId,String returnNode,DefaultUser user,T handler);
 
 
     /**
