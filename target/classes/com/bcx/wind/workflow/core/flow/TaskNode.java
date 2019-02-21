@@ -100,6 +100,10 @@ public class TaskNode extends BaseNode implements TaskModel{
     private  void  submitNodeNext(String submitNode){
         NodeModel nodeModel = getTaskModel(submitNode);
         TaskNode taskNode = (TaskNode)nodeModel;
+        if(this.inRouter && !taskNode.inRouter){
+            //删除子流程实例
+            engine().runtimeService().orderService().deleteByParentId(workflow().getOrderId());
+        }
         this.handler(new TaskHandler(this.actuator,taskNode,this.task));
     }
 

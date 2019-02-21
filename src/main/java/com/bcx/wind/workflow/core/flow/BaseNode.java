@@ -26,6 +26,9 @@ import static com.bcx.wind.workflow.core.constant.NodeName.*;
 import static com.bcx.wind.workflow.core.constant.WorkflowOperateConstant.REJECT;
 import static com.bcx.wind.workflow.message.MsgConstant.w018;
 
+/**
+ * @author zhanglei
+ */
 public abstract class BaseNode extends Node implements NodeModel {
 
     /**

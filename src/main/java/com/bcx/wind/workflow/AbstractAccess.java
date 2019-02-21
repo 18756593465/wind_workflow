@@ -2,7 +2,6 @@ package com.bcx.wind.workflow;
 
 import com.bcx.wind.workflow.access.FlowPage;
 import com.bcx.wind.workflow.access.QueryFilter;
-import com.bcx.wind.workflow.core.handler.CompleteHandler;
 import com.bcx.wind.workflow.db.paging.Paging;
 import com.bcx.wind.workflow.entity.*;
 import com.bcx.wind.workflow.exception.WorkflowException;
@@ -22,7 +21,7 @@ import java.util.List;
  * createTime: 2018-12-20
  */
 public abstract class AbstractAccess implements Access {
-
+clear
     //流程定义
     private static final String PROCESS_DEFINITION_INSERT = " insert into wind_process_definition(id,process_name,display_name,status,version,parent_id,create_time,content,system) values(?,?,?,?,?,?,?,?,?);";
 

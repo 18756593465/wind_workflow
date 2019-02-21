@@ -2,7 +2,6 @@ package com.bcx.wind.workflow;
 
 import com.bcx.wind.workflow.access.FlowPage;
 import com.bcx.wind.workflow.access.QueryFilter;
-import com.bcx.wind.workflow.core.handler.CompleteHandler;
 import com.bcx.wind.workflow.db.paging.Paging;
 import com.bcx.wind.workflow.entity.*;
 import com.bcx.wind.workflow.exception.WorkflowException;

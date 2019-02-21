@@ -4,7 +4,7 @@ Navicat PGSQL Data Transfer
 Source Server         : localhost
 Source Server Version : 100100
 Source Host           : localhost:5432
-Source Database       : wind_workflow
+Source Database       : zflow
 Source Schema         : public
 
 Target Server Type    : PGSQL
