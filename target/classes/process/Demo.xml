@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE process PUBLIC "-//workflow" "workflow-1-process.dtd">
+
+<process name="holiday" displayName="请假流程">
+    <start name="start" displayName="开始">
+        <path name="startPath" displayName="开始路线" to="edit"/>
+    </start>
+
+    <task name="edit" displayName="编辑" >
+        <path name="editPath" displayName="编辑提交路线" to="approve"/>
+    </task>
+    <task name="approve" displayName="审批" jointly="true" assigneeUser="approveUser">
+        <path name="approvePath" displayName="提交路线" to="agree"/>
+    </task>
+    <task name="agree" displayName="同意" jointly="false" assigneeUser="agreeUser">
+        <path name="agreePath" displayName="同意路线" to="end"/>
+    </task>
+
+    <end name="end" displayName="结束路线"/>
+
+    <assignee id="approveUser">
+        <property userId="10001" userName="张三"/>
+        <property userId="10002" userName="李四"/>
+    </assignee>
+
+    <assignee id="agreeUser">
+        <property userId="10003" userName="王五"/>
+    </assignee>
+</process>
+

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!ELEMENT process (start+ | end+ | task+ | and* | or* |  andJoin* |  orJoin* | disc* | router* | assignee* | scribe* | scribeTask* | custom*)+>
+<!ATTLIST process name CDATA #REQUIRED  displayName CDATA #REQUIRED>
+
+<!ELEMENT start (path+)>
+<!ATTLIST start name CDATA #REQUIRED  displayName CDATA  #REQUIRED>
+
+
+<!ELEMENT end (path*)>
+<!ATTLIST end name CDATA #REQUIRED  displayName CDATA  #REQUIRED>
+
+<!ELEMENT scribe (path*)>
+<!ATTLIST scribe
+        name CDATA #REQUIRED
+        displayName CDATA #REQUIRED
+       >
+
+<!ELEMENT scribeTask EMPTY>
+<!ATTLIST scribeTask
+        name CDATA #REQUIRED
+        displayName CDATA #REQUIRED
+        interceptor (true | false) #IMPLIED
+        >
+
+<!ELEMENT task (path+)>
+<!ATTLIST task
+        name CDATA #REQUIRED
+        displayName CDATA  #REQUIRED
+        jointly  (true | false) #IMPLIED
+        assigneeUser CDATA #IMPLIED
+        interceptor (true | false) #IMPLIED
+        >
+
+<!ELEMENT and (path+)>
+<!ATTLIST and
+        name CDATA #REQUIRED
+        displayName CDATA #REQUIRED
+        >
+
+<!ELEMENT or (path+)>
+<!ATTLIST or
+        name CDATA #REQUIRED
+        displayName CDATA #REQUIRED
+        >
+
+
+<!ELEMENT andJoin (path+)>
+<!ATTLIST andJoin
+        name CDATA #REQUIRED
+        displayName CDATA #REQUIRED
+        >
+
+<!ELEMENT orJoin (path+)>
+<!ATTLIST orJoin
+        name CDATA #REQUIRED
+        displayName CDATA #REQUIRED
+        >
+
+<!ELEMENT disc (path+)>
+<!ATTLIST disc
+        name CDATA #REQUIRED
+        displayName CDATA #REQUIRED
+        expr CDATA #IMPLIED
+        >
+
+<!ELEMENT custom (path+)>
+<!ATTLIST custom
+        name CDATA #REQUIRED
+        displayName CDATA #REQUIRED
+        interceptor (true | false) #IMPLIED
+        >
+
+
+<!ELEMENT router (start+ | end+ | task+ | and* | or* |  andJoin* |  orJoin* | disc* | router* | path+ | scribe* | scribeTask* | custom*)+>
+<!ATTLIST router
+        name CDATA #REQUIRED
+        displayName CDATA #REQUIRED
+        timeOut CDATA #IMPLIED
+        >
+
+
+<!ELEMENT path EMPTY>
+<!ATTLIST path
+        name CDATA #REQUIRED
+        displayName CDATA #REQUIRED
+        to CDATA #REQUIRED
+        expr CDATA #IMPLIED
+        >
+
+
+
+<!ELEMENT assignee (property+)>
+<!ATTLIST assignee
+        id CDATA #REQUIRED
+        name CDATA #IMPLIED
+        >
+
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+        userId CDATA #REQUIRED
+        userName CDATA #REQUIRED
+        >

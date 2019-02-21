@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<!DOCTYPE process PUBLIC "-//workflow" "workflow-1-process.dtd">
+
+<process name="holiday" displayName="请假流程模型">
+    
+    <start name="start" displayName="开始">
+        <path name="startPath" displayName="开始路线" to="edit"/>
+    </start>
+
+    <task name="edit" displayName="起草">
+        <path name="editPath" displayName="起草路线" to="router"/>
+    </task>
+
+    <router name="router" displayName="子流程">
+        <start name="routerStart" displayName="子流程开始">
+            <path name="routerStartPath" displayName="子流程开始路线" to="routerEdit"/>
+        </start>
+
+        <task name="routerEdit" displayName="子流程起草">
+            <path name="routerEditPath" displayName="子流程起草路线" to="routerApprove"/>
+        </task>
+        
+        <task name="routerApprove" displayName="子流程审批">
+            <path name="routerApprovePath" displayName="子流程审批路线" to="routerEnd"/>
+        </task>
+        
+        <end name="routerEnd" displayName="子流程结束"/>
+
+        <path name="router_path" displayName="子流程路线" to="scribe"/>
+    </router>
+
+    <scribe name="scribe" displayName="订阅路由">
+        <path name="scribePath1" displayName="订阅路线1" to="scribeTask"/>
+        <path name="scribePath2" displayName="订阅路线2" to="monitor"/>
+    </scribe>
+
+    <scribeTask name="scribeTask" displayName="订阅任务"/>
+
+    <task name="monitor" displayName="班长审批" assigneeUser="minAssignee" jointly="true" interceptor="true">
+        <path name="monitorPath" displayName="班长审批提交路线" to="andFork"/>
+    </task>
+
+    <and name="andFork" displayName="并且分支">
+        <path name="andFork_1" displayName="并且分支路线1" to="approveA"/>
+        <path name="andFork_2" displayName="并且分支路线2" to="approveC"/>
+    </and>
+
+    <task name="approveA" displayName="审批A">
+        <path name="approveA_path" displayName="审批A路线" to="approveB"/>
+    </task>
+
+    <task name="approveC" displayName="审批C">
+        <path name="approveC_path" displayName="审批C路线" to="andJoin"/>
+    </task>
+
+    <task name="approveB" displayName="审批B">
+        <path name="approveB_path" displayName="审批B路线" to="andJoin"/>
+    </task>
+
+    <andJoin name="andJoin" displayName="并且聚合">
+        <path name="andJoin_path" displayName="并且聚合路线" to="minister"/>
+    </andJoin>
+
+    <task name="minister" displayName="部长审批">
+        <path name="minister_path" displayName="部长审批路线" to="disc"/>
+    </task>
+
+    <disc name="disc" displayName="决策路由">
+        <path name="disc_path1" displayName="决策路线1" to="finance"/>
+        <path name="disc_path2" displayName="决策路线2" to="manager"/>
+    </disc>
+
+    <task name="finance" displayName="财务审批">
+        <path name="finance_path" displayName="财务路线" to="boss"/>
+    </task>
+
+    <task name="manager" displayName="总经理审批">
+        <path name="manager_path" displayName="总经理路线" to="end"/>
+    </task>
+
+    <task name="boss" displayName="董事长">
+        <path name="boss_path" displayName="董事长路线" to="end"/>
+    </task>
+
+    <end name="end" displayName="结束"/>
+
+
+    <assignee id="minAssignee">
+        <property userId="1001" userName="张三"/>
+        <property userId="1002" userName="李四"/>
+    </assignee>
+</process>
