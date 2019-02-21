@@ -21,7 +21,7 @@ import java.util.List;
  * createTime: 2018-12-20
  */
 public abstract class AbstractAccess implements Access {
-clear
+
     //流程定义
     private static final String PROCESS_DEFINITION_INSERT = " insert into wind_process_definition(id,process_name,display_name,status,version,parent_id,create_time,content,system) values(?,?,?,?,?,?,?,?,?);";
 

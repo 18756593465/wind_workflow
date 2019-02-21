@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23cbe910-571d-473d-b495-934360053521" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/AbstractAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/AbstractAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/BaseNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/BaseNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/TaskNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/TaskNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/postgres.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/postgres.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/impl/WorkflowSessionRejectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/impl/WorkflowSessionRejectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/AbstractAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/AbstractAccess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/AbstractAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/AbstractAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/BaseNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/BaseNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/BaseNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/BaseNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/TaskNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/TaskNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/TaskNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/TaskNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/postgres.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/postgres.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflow.log" beforeDir="false" afterPath="$PROJECT_DIR$/workflow.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -137,20 +121,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractAccess.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AbstractAccess.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/AbstractAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+            <state relative-caret-position="272">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="391">
+              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -289,11 +273,11 @@
         <option value="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/impl/WorkflowSessionRejectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/BaseNode.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db/postgres.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/AbstractAccess.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/TaskNode.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/spring/BeanConfig.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/AbstractAccess.java" />
       </list>
     </option>
   </component>
@@ -690,7 +674,7 @@
       <workItem from="1547688344396" duration="1581000" />
       <workItem from="1547694571205" duration="199087000" />
       <workItem from="1550106206651" duration="41266000" />
-      <workItem from="1550322887131" duration="97420000" />
+      <workItem from="1550322887131" duration="97934000" />
     </task>
     <servers />
   </component>
@@ -727,7 +711,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="688458000" />
+    <option name="totallyTimeSpent" value="688972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1263,13 +1247,6 @@ msg.load(new InputStreamReader(stream,&quot;UTF-16&quot;));</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/AbstractAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/CompleteExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1286,8 +1263,15 @@ msg.load(new InputStreamReader(stream,&quot;UTF-16&quot;));</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="391">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/AbstractAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>
