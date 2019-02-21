@@ -2,588 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23cbe910-571d-473d-b495-934360053521" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6813284946c701e58ab7fc41cb498e3081c869d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/AbstractAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/Access.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/AccessService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/BeanContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/HistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/HistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/Interceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/RepositoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/RepositoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/RuntimeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/RuntimeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/WorkflowEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/WorkflowEngineImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/access/FlowPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/access/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/access/QueryFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/cache/BaseCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/cache/BlockingCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/cache/Cache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/cache/DefaultCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/cache/ScheduleClearCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/ActiveHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/Actuator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/CompleteHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/OrderHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/ProcessConfigurationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/ProcessService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/TaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/WorkflowSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/ErrorContant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/NodeAttr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/NodeConfigConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/NodeName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/NodeType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/OrderType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/OrderVariableKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/ProcessType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/TaskStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/TaskType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/TaskVariableKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/WorkflowOperate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/WorkflowOperateConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/AndCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/AndJoinNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/AndNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/BaseNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/CustomNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/DiscNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/EndNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/NodeCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/NodeModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/OrCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/OrJoinNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/OrNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/Path.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/ProcessModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/RouterNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/ScribeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/ScribeTaskNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/StartNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/TaskModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/TaskNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/handler/BuildHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/handler/CompleteHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/handler/RejectHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/handler/SubScribeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/handler/SubmitHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/handler/WithdrawHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/lock/BusinessLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/lock/Content.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/lock/LockData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/lock/MsgContent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/ApproveUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/DefaultUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/NodeConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/Workflow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/WorkflowVariable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/config/Compare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/config/Condition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/user/UserField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/pojo/user/UserObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/dataSource/connection/ConnectionPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/dataSource/connection/WorkflowConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/dataSource/dataSource/WorkflowDataSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/dataSource/transaction/AccessTransactionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/db/DBhelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/db/paging/H2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/db/paging/Microsoft.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/db/paging/MySql.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/db/paging/Oracle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/db/paging/Paging.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/db/paging/Postgres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/entity/ActiveHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/entity/CompleteHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/entity/OrderBusiness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/entity/OrderHistoryInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/entity/OrderInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/entity/ProcessConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/entity/ProcessDefinition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/entity/TaskActor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/entity/TaskInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/entity/flow/ProcessModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/exception/WorkflowException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/BaseExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/BuildExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/CompleteExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/Executor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/RejectExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/RoutingExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/SubmitExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/WithdrawExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/handler/BaseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/handler/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/handler/RouterHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/handler/ScribeTaskHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/handler/TaskHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/helper/Assert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/helper/JsonHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/helper/ObjectHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/helper/StreamHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/helper/TimeHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/helper/XmlHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/impl/ActiveHistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/impl/CompleteHistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/impl/DefaultWorkflowSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/impl/OrderHistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/impl/ProcessConfigurationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/impl/ProcessServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/impl/TaskServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/impl/WorkflowEngineBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/io/ClassLoaderWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/io/Resources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/jdbc/FlowResultCountHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/jdbc/FlowResultHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/jdbc/JdbcAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/jdbc/WorkflowSelfBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/message/MessageHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/message/MsgConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/message/WorkflowMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/message/msg/en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/message/msg/zh.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/mybatis/MybatisAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/mybatis/WorkflowMybatisBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/parser/ProcessBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/parser/XMLProcessEntityResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/parser/xml/workflow-1-process.dtd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/spring/SpringAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/postgres.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/process/Context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/process/Demo.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/wind/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/access/base.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/access/db/ActiveHistoryAccessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/access/db/CompleteHistoryAccessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/access/db/HistoryOrderInstanceAccessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/access/db/OrderBusinessAccessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/access/db/OrderInstanceAccessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/access/db/ProcessConfigAccessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/access/db/ProcessDefinitionAccessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/access/db/TaskActorAccessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/access/db/TaskInstanceAccessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/cache/BlockCacheTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/cache/ScheduleCacheTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/core/flow/ProcessModelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/dataSource/WorkflowDataSourceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/helper/AssertTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/helper/JsonHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/helper/StreamHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/helper/TimeHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/helper/XmlHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/impl/ActiveHistoryServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/impl/CompleteHistoryServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/impl/DefaultWorkflowSessionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/impl/OrderHistoryServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/impl/OrderServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/impl/ProcessConfigServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/impl/ProcessDefinitionServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/impl/TaskInstanceServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/io/ResourcesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/jdbc/WorkflowSelfBuilderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/mybatis/MybatisAccessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/parser/DemoParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/spring/BeanConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/spring/SpringAccessTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bcx/wind/workflow/spring/TestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/AbstractAccess.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/AbstractAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/Access.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/Access.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/AccessService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/AccessService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/BeanContext.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/BeanContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/Context.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/HistoryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/HistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/HistoryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/HistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/Interceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/Interceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/RepositoryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/RepositoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/RepositoryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/RepositoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/RuntimeService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/RuntimeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/RuntimeServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/RuntimeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/WorkflowEngine.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/WorkflowEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/WorkflowEngineImpl$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/WorkflowEngineImpl$WorkflowEngineCreate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/WorkflowEngineImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/WorkflowEngineImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/access/FlowPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/access/FlowPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/access/Page.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/access/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/access/QueryFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/access/QueryFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/cache/BaseCache.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/cache/BaseCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/cache/BlockingCache.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/cache/BlockingCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/cache/Cache.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/cache/Cache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/cache/DefaultCache.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/cache/DefaultCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/cache/ScheduleClearCache.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/cache/ScheduleClearCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/ActiveHistoryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/ActiveHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/Actuator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/Actuator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/CompleteHistoryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/CompleteHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/OrderHistoryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/OrderHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/OrderService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/ProcessConfigurationService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/ProcessConfigurationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/ProcessService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/ProcessService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/TaskService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/TaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/WorkflowSession.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/WorkflowSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/Constant.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/ErrorContant.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/ErrorContant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/NodeAttr.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/NodeAttr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/NodeConfigConstant.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/NodeConfigConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/NodeName.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/NodeName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/NodeType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/NodeType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/OrderType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/OrderType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/OrderVariableKey.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/OrderVariableKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/ProcessType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/ProcessType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/TaskStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/TaskStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/TaskType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/TaskType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/TaskVariableKey.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/TaskVariableKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/WorkflowOperate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/WorkflowOperate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/WorkflowOperateConstant.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/constant/WorkflowOperateConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/AndCache$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/AndCache$AndCacheInstance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/AndCache.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/AndCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/AndJoinNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/AndJoinNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/AndNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/AndNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/BaseNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/BaseNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/CustomNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/CustomNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/DiscNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/DiscNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/EndNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/EndNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/NodeCache$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/NodeCache$NodeCacheInstance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/NodeCache.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/NodeCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/NodeModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/NodeModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/OrCache$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/OrCache$OrCacheInstance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/OrCache.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/OrCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/OrJoinNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/OrJoinNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/OrNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/OrNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/Path.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/Path.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/ProcessModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/ProcessModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/RouterNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/RouterNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/ScribeNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/ScribeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/ScribeTaskNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/ScribeTaskNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/StartNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/StartNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/TaskModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/TaskModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/TaskNode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/flow/TaskNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/BuildHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/BuildHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/CompleteHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/CompleteHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/RejectHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/RejectHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/SubScribeHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/SubScribeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/SubmitHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/SubmitHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/WithdrawHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/handler/WithdrawHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/lock/BusinessLock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/lock/BusinessLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/lock/Content.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/lock/Content.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/lock/LockData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/lock/LockData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/lock/MsgContent$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/lock/MsgContent$MsgContentInstance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/lock/MsgContent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/lock/MsgContent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/ApproveUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/ApproveUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/Configuration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/DefaultUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/DefaultUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/NodeConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/NodeConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/Task.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/Workflow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/Workflow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/WorkflowVariable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/WorkflowVariable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/config/Compare.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/config/Compare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/config/Condition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/config/Condition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/user/UserField.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/user/UserField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/user/UserObject.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/core/pojo/user/UserObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/dataSource/connection/ConnectionPool.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/dataSource/connection/ConnectionPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/dataSource/connection/WorkflowConnection.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/dataSource/connection/WorkflowConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/dataSource/dataSource/WorkflowDataSource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/dataSource/dataSource/WorkflowDataSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/dataSource/transaction/AccessTransactionManager$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/dataSource/transaction/AccessTransactionManager$TransactionManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/dataSource/transaction/AccessTransactionManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/dataSource/transaction/AccessTransactionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/DBhelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/DBhelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/H2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/H2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/Microsoft.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/Microsoft.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/MySql.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/MySql.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/Oracle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/Oracle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/Paging.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/Paging.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/Postgres.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/db/paging/Postgres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/ActiveHistory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/ActiveHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/CompleteHistory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/CompleteHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/OrderBusiness.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/OrderBusiness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/OrderHistoryInstance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/OrderHistoryInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/OrderInstance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/OrderInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/ProcessConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/ProcessConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/ProcessDefinition.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/ProcessDefinition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/TaskActor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/TaskActor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/TaskInstance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/TaskInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/flow/ProcessModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/entity/flow/ProcessModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/exception/WorkflowException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/exception/WorkflowException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/BaseExecutor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/BaseExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/BuildExecutor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/BuildExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/CompleteExecutor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/CompleteExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/Executor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/Executor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/RejectExecutor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/RejectExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/RoutingExecutor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/RoutingExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/SubmitExecutor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/SubmitExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/WithdrawExecutor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/WithdrawExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/handler/BaseHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/handler/BaseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/handler/Handler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/handler/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/handler/RouterHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/handler/RouterHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/handler/ScribeTaskHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/handler/ScribeTaskHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/handler/TaskHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/executor/handler/TaskHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/Assert.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/Assert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/JsonHelper$ObjectMapperBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/JsonHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/JsonHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/ObjectHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/ObjectHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/StreamHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/StreamHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/TimeHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/TimeHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/XmlHelper$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/XmlHelper$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/XmlHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/helper/XmlHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/ActiveHistoryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/ActiveHistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/CompleteHistoryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/CompleteHistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/DefaultWorkflowSession.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/DefaultWorkflowSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/OrderHistoryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/OrderHistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/OrderServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/ProcessConfigurationServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/ProcessConfigurationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/ProcessServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/ProcessServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/TaskServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/TaskServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/WorkflowEngineBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/impl/WorkflowEngineBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/io/ClassLoaderWrapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/io/ClassLoaderWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/io/Resources.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/io/Resources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/jdbc/FlowResultCountHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/jdbc/FlowResultCountHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/jdbc/FlowResultHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/jdbc/FlowResultHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/jdbc/JdbcAccess.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/jdbc/JdbcAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/jdbc/WorkflowSelfBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/jdbc/WorkflowSelfBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/message/MessageHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/message/MessageHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/message/MsgConstant.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/message/MsgConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/message/WorkflowMessage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/message/WorkflowMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/message/msg/en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/message/msg/zh.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/mybatis/MybatisAccess.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/mybatis/MybatisAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/mybatis/WorkflowMybatisBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/mybatis/WorkflowMybatisBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/parser/ProcessBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/parser/ProcessBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/parser/XMLProcessEntityResolver.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/parser/XMLProcessEntityResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/parser/xml/workflow-1-process.dtd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/spring/SpringAccess.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/bcx/wind/workflow/spring/SpringAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/db/postgres.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/process/Context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/process/Demo.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/wind/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.bcx.wind.workflow.parser.demo.DemoParserTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/com.bcx.wind.workflow.parser.demo.DemoParserTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/BaseTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/access/base.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/access/db/ActiveHistoryAccessTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/access/db/CompleteHistoryAccessTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/access/db/HistoryOrderInstanceAccessTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/access/db/OrderBusinessAccessTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/access/db/OrderInstanceAccessTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/access/db/ProcessConfigAccessTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/access/db/ProcessDefinitionAccessTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/access/db/TaskActorAccessTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/access/db/TaskInstanceAccessTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/cache/BlockCacheTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/cache/ScheduleCacheTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/core/flow/ProcessModelTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/dataSource/WorkflowDataSourceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/helper/AssertTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/helper/JsonHelperTest$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/helper/JsonHelperTest$DUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/helper/JsonHelperTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/helper/StreamHelperTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/helper/TimeHelperTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/helper/XmlHelperTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/impl/ActiveHistoryServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/impl/CompleteHistoryServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/impl/DefaultWorkflowSessionTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/impl/OrderHistoryServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/impl/OrderServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/impl/ProcessConfigServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/impl/ProcessDefinitionServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/impl/TaskInstanceServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/io/ResourcesTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/jdbc/WorkflowSelfBuilderTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/mybatis/MybatisAccessTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/parser/DemoParserTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/spring/BeanConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/spring/SpringAccessTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/bcx/wind/workflow/spring/TestService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/workflow-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/workflow.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/handler/TaskHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/handler/TaskHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/postgres.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/postgres.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -657,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TaskHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/handler/TaskHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="281">
+              <caret line="68" column="37" lean-forward="true" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1279#1280#0" expanded="true" />
@@ -669,6 +89,15 @@
                 <element signature="e#1364#1365#0" expanded="true" />
                 <element signature="e#1391#1392#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postgres.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/postgres.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -735,15 +164,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-697">
               <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderVariableKey.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/constant/OrderVariableKey.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="48" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -1013,6 +433,22 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="workflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workflow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="workflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="workflow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="workflow" type="b2602c69:ProjectViewProjectNode" />
@@ -1360,7 +796,7 @@
       <workItem from="1547688344396" duration="1581000" />
       <workItem from="1547694571205" duration="199087000" />
       <workItem from="1550106206651" duration="41266000" />
-      <workItem from="1550322887131" duration="83184000" />
+      <workItem from="1550322887131" duration="84469000" />
     </task>
     <servers />
   </component>
@@ -1397,7 +833,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="674222000" />
+    <option name="totallyTimeSpent" value="675507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1578,16 +1014,6 @@ msg.load(new InputStreamReader(stream,&quot;UTF-16&quot;));</expression-string>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/ScribeTaskNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/core/flow/StartNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1985,8 +1411,8 @@ msg.load(new InputStreamReader(stream,&quot;UTF-16&quot;));</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bcx/wind/workflow/executor/handler/TaskHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="281">
+          <caret line="68" column="37" lean-forward="true" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1279#1280#0" expanded="true" />
@@ -1994,6 +1420,13 @@ msg.load(new InputStreamReader(stream,&quot;UTF-16&quot;));</expression-string>
             <element signature="e#1364#1365#0" expanded="true" />
             <element signature="e#1391#1392#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/postgres.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>

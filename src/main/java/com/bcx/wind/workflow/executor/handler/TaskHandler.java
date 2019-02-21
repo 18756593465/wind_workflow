@@ -61,6 +61,7 @@ public class TaskHandler extends BaseHandler implements Handler{
         if(ObjectHelper.isEmpty(approveUsers) && WorkflowOperateConstant.REJECT.equals(actuator.getOperate().name())){
 
         }
+
         Assert.notEmpty("submitWorkflow require parameters orderId user approveUsers has null!", approveUsers);
         for(ApproveUser user : approveUsers){
             String nodeId = user.getNodeId();
