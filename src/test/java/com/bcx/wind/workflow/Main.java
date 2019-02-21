@@ -28,10 +28,7 @@ public class Main {
         System.out.println();
         System.out.println();
         System.out.println();
-<<<<<<< HEAD
 
-=======
->>>>>>> 8931e0c5005f073ebaa559d9f239389c7764575a
         System.out.println();
     }
 
