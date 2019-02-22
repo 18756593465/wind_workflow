@@ -19,9 +19,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class WorkflowSessionSubmitTest extends BaseTest {
-
-    private String orderId = "b0ee8c043f584487a0fd08b2de87715a";
-
     private String childOrderId = "085e6e77c1a845f3b190f5e1fa76785a";
 
 

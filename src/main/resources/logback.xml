@@ -25,7 +25,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
     <appender name="appLogAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <Encoding>UTF-8</Encoding>
         <!-- 指定日志文件的名称 -->  
-        <file>${appName}.log</file>
+        <file>log/${appName}.log</file>
         <!--
         当发生滚动时，决定 RollingFileAppender 的行为，涉及文件移动和重命名
         TimeBasedRollingPolicy： 最常用的滚动策略，它根据时间来制定滚动策略，既负责滚动也负责出发滚动。

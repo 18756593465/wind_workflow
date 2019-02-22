@@ -3,12 +3,10 @@ package com.bcx.wind.workflow.executor;
 import com.bcx.wind.workflow.WorkflowEngine;
 import com.bcx.wind.workflow.access.QueryFilter;
 import com.bcx.wind.workflow.core.Actuator;
+import com.bcx.wind.workflow.core.constant.WorkflowOperateConstant;
 import com.bcx.wind.workflow.core.flow.*;
 import com.bcx.wind.workflow.core.handler.*;
-import com.bcx.wind.workflow.core.pojo.Task;
-import com.bcx.wind.workflow.core.pojo.User;
-import com.bcx.wind.workflow.core.pojo.Workflow;
-import com.bcx.wind.workflow.core.pojo.WorkflowVariable;
+import com.bcx.wind.workflow.core.pojo.*;
 import com.bcx.wind.workflow.entity.ActiveHistory;
 import com.bcx.wind.workflow.entity.OrderBusiness;
 import com.bcx.wind.workflow.entity.OrderInstance;
@@ -321,6 +319,26 @@ public abstract class BaseExecutor implements Executor{
             workflow().setBusinessId(businesses.stream().map(OrderBusiness::getBusinessId).collect(Collectors.toList()));
         }
 
+    }
+
+
+    protected void buildWorkflow(){
+        //查询流程实例
+        if(!WorkflowOperateConstant.REJECT.equals(this.actuator.getOperate().name())) {
+            buildOrderInstance();
+
+            this.actuator.getWorkflow().setVariable(variable()).setApproveUsers(variable().getApproveUsers())
+                    .setSystem(variable().getSystem())
+                    .setBusinessId(variable().getBusinessId())
+                    .setUser(variable().getUser());
+
+            //当前任务
+            buildCurTask();
+        }
+    }
+
+    protected DefaultUser user(){
+        return workflow().getUser();
     }
 
 }

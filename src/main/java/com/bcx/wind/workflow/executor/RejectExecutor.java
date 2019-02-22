@@ -5,8 +5,6 @@ import com.bcx.wind.workflow.core.constant.NodeName;
 import com.bcx.wind.workflow.core.flow.ScribeTaskNode;
 import com.bcx.wind.workflow.core.flow.TaskModel;
 import com.bcx.wind.workflow.core.flow.TaskNode;
-import com.bcx.wind.workflow.core.pojo.Configuration;
-import com.bcx.wind.workflow.core.pojo.NodeConfig;
 import com.bcx.wind.workflow.core.pojo.Task;
 import com.bcx.wind.workflow.helper.Assert;
 import com.bcx.wind.workflow.helper.ObjectHelper;
@@ -87,17 +85,5 @@ public class RejectExecutor extends BaseExecutor {
     }
 
 
-    private void buildWorkflow(){
-        //查询流程实例
-        buildOrderInstance();
-
-        this.actuator.getWorkflow().setVariable(variable()).setApproveUsers(variable().getApproveUsers())
-                .setSystem(variable().getSystem())
-                .setBusinessId(variable().getBusinessId())
-                .setUser(variable().getUser());
-
-        //当前任务
-        buildCurTask();
-    }
 
 }

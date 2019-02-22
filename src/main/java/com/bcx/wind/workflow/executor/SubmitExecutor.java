@@ -25,30 +25,13 @@ public class SubmitExecutor extends BaseExecutor {
     }
 
 
-    private void exec(){
+    private void exec() {
         List<Task> tasks = workflow().getCurTask();
-        for(Task task : tasks){
+        for (Task task : tasks) {
             NodeModel nodeModel = task.getTaskModel();
             nodeModel.actuator(this.actuator);
             nodeModel.task(task);
             nodeModel.execute();
-        }
-    }
-
-
-
-    private void buildWorkflow(){
-        //查询流程实例
-        if(!WorkflowOperateConstant.REJECT.equals(this.actuator.getOperate().name())) {
-            buildOrderInstance();
-
-            this.actuator.getWorkflow().setVariable(variable()).setApproveUsers(variable().getApproveUsers())
-                    .setSystem(variable().getSystem())
-                    .setBusinessId(variable().getBusinessId())
-                    .setUser(variable().getUser());
-
-            //当前任务
-            buildCurTask();
         }
     }
 

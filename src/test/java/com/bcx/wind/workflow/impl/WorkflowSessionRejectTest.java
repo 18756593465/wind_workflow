@@ -9,8 +9,6 @@ import org.junit.Test;
 
 public class WorkflowSessionRejectTest extends BaseTest {
 
-    String orderId = "b0ee8c043f584487a0fd08b2de87715a";
-
     @Test
     public void rejectOne(){
         ObjectHelper.primaryKey();
