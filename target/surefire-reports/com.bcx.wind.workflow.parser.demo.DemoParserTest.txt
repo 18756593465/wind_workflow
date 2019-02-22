@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.bcx.wind.workflow.parser.demo.DemoParserTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.338 sec

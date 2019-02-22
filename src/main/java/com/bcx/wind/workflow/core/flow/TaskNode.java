@@ -2,7 +2,6 @@ package com.bcx.wind.workflow.core.flow;
 
 import com.bcx.wind.workflow.access.QueryFilter;
 import com.bcx.wind.workflow.core.constant.NodeType;
-import com.bcx.wind.workflow.core.constant.WorkflowOperate;
 import com.bcx.wind.workflow.core.constant.WorkflowOperateConstant;
 import com.bcx.wind.workflow.core.pojo.ApproveUser;
 import com.bcx.wind.workflow.core.pojo.DefaultUser;
@@ -27,6 +26,7 @@ import static com.bcx.wind.workflow.core.constant.Constant.AND;
 import static com.bcx.wind.workflow.core.constant.Constant.*;
 import static com.bcx.wind.workflow.core.constant.Constant.OR;
 import static com.bcx.wind.workflow.core.constant.NodeName.*;
+import static com.bcx.wind.workflow.core.constant.OrderVariableKey.LAST_SUBMIT_TASK_NODE;
 import static com.bcx.wind.workflow.core.constant.OrderVariableKey.TASK_APPROVE_USER;
 import static com.bcx.wind.workflow.core.constant.TaskStatus.RUN;
 import static com.bcx.wind.workflow.core.constant.TaskType.ALL;
@@ -63,7 +63,6 @@ public class TaskNode extends BaseNode implements TaskModel{
      * 是否在and分支中
      */
     private boolean inAnd;
-
 
 
     /**
@@ -389,8 +388,15 @@ public class TaskNode extends BaseNode implements TaskModel{
         }else{
             addTaskApproveUserToOrderVariable(approveUser,over,instance);
         }
+        //添加当前提交的节点，供后面撤回使用
+        addNowNodeIdToOrderInstance(instance);
+        engine().runtimeService().orderService().update(instance);
     }
 
+
+    private void addNowNodeIdToOrderInstance(OrderInstance orderInstance){
+        orderInstance.getVariableMap().put(LAST_SUBMIT_TASK_NODE,this.task.getTaskModel().name());
+    }
 
 
 
@@ -439,7 +445,7 @@ public class TaskNode extends BaseNode implements TaskModel{
             taskApproveUser.put(this.name,users);
             orderInstance.addValue(TASK_APPROVE_USER,taskApproveUser);
         }
-        engine().runtimeService().orderService().update(orderInstance);
+
     }
 
 
@@ -568,6 +574,7 @@ public class TaskNode extends BaseNode implements TaskModel{
     }
 
 
+
     /**
      * 添加执行历史履历  该任务尚未完成
      *
@@ -591,6 +598,7 @@ public class TaskNode extends BaseNode implements TaskModel{
 
         engine().historyService().activeHistoryService().insert(activeHistory);
     }
+
 
 
     public void build(){

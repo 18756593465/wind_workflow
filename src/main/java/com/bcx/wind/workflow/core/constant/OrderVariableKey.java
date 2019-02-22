@@ -11,5 +11,8 @@ public class OrderVariableKey {
     public static final String TASK_APPROVE_USER = "taskApproveUser";
 
 
+    //上一次被提交的任务节点
+    public static final String LAST_SUBMIT_TASK_NODE = "lastTaskSubmitTaskNode";
+
 
 }
