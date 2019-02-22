@@ -34,6 +34,13 @@ public class DemoParserTest {
 
             ProcessModel model = ProcessBuilder.getInstance().setInputStream(stream).build("12345");
             model.getAllTaskNodes();
+
+            model.getLastTasks("boss");
+
+            boolean isNext = model.isNextTask("edit","monitor");
+            model.isNextTask("edit","approveB");
+
+            System.out.println();
             System.out.println();
         } catch (IOException e) {
             e.printStackTrace();

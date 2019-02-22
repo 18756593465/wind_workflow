@@ -149,12 +149,10 @@ public class TaskHandler extends BaseHandler implements Handler{
 
 
 
-
     private void createActiveHistory(boolean jointly,String taskId){
         ActiveHistory history = new ActiveHistory()
                 .setProcessName(this.actuator.getProcessModel().getName())
                 .setProcessDisplayName(this.actuator.getProcessModel().getDisplayName())
-                .setOperate(this.actuator.getOperate().value())
                 .setApproveUserVariable(JsonHelper.toJson(workflow().getApproveUsers()))
                 .setTaskType(jointly ? TaskType.ALL : TaskType.ANY)
                 .setSystem(workflow().getSystem())

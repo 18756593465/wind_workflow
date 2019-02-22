@@ -4,6 +4,7 @@ import com.bcx.wind.workflow.exception.WorkflowException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -94,4 +95,6 @@ public class Assert {
     public static void nonEmpty(Object ...objects){
         hasEmpty("the  args is must not be empty!",objects);
     }
+
+
 }

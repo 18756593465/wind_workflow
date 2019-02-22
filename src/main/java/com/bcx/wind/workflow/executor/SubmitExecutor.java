@@ -39,7 +39,7 @@ public class SubmitExecutor extends BaseExecutor {
 
     private void buildWorkflow(){
         //查询流程实例
-        if(WorkflowOperateConstant.SUBMIT.equals(this.actuator.getOperate().name())) {
+        if(!WorkflowOperateConstant.REJECT.equals(this.actuator.getOperate().name())) {
             buildOrderInstance();
 
             this.actuator.getWorkflow().setVariable(variable()).setApproveUsers(variable().getApproveUsers())

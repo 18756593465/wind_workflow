@@ -75,4 +75,9 @@ public class MsgConstant {
     /**对不起，驳回节点【${0}】不存在，无法驳回**/
     public static final String w023 = "w023";
 
+    /**w024 = 对不起，驳回节点不可为自身！**/
+    public static final String w024 = "w024";
+
+    /**w025 = 对不起，驳回任务不可为后续任务！**/
+    public static final String w025 = "w025";
 }

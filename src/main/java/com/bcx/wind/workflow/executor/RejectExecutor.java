@@ -14,8 +14,7 @@ import com.bcx.wind.workflow.message.MessageHelper;
 
 import java.util.List;
 
-import static com.bcx.wind.workflow.message.MsgConstant.w021;
-import static com.bcx.wind.workflow.message.MsgConstant.w023;
+import static com.bcx.wind.workflow.message.MsgConstant.*;
 
 
 /**
@@ -44,11 +43,15 @@ public class RejectExecutor extends BaseExecutor {
     }
 
 
-
+    /**
+     * 校验当前节点和被驳回节点是否可以执行驳回操作
+     */
     private void checkCanReject(){
         List<Task> taskList = workflow().getCurTask();
         for(Task task : taskList){
             TaskModel taskModel = task.getTaskModel();
+            Assert.isTrue(MessageHelper.getMsg(w024),taskModel.name().equals(variable().getSubmitNode()));
+            Assert.isTrue(MessageHelper.getMsg(w025),!this.actuator.getProcessModel().isLastTask(task.getTaskName(),variable().getSubmitNode()));
             Assert.isTrue(MessageHelper.getMsg(w021,taskModel.displayName(),NodeName.SUB_SCRIBE_TASK),taskModel instanceof ScribeTaskNode);
 
             if(taskModel instanceof TaskNode) {
@@ -57,6 +60,7 @@ public class RejectExecutor extends BaseExecutor {
             }
         }
     }
+
 
 
     private void addSubmitNode(){
@@ -78,7 +82,7 @@ public class RejectExecutor extends BaseExecutor {
         Assert.isTrue(MessageHelper.getMsg(w021,taskModel.displayName(),NodeName.SUB_SCRIBE_TASK),taskModel instanceof ScribeTaskNode);
         if(taskModel instanceof TaskNode) {
             TaskNode node = (TaskNode)taskModel;
-            Assert.isTrue(MessageHelper.getMsg(w021,node.displayName(),NodeName.FORK_TASK),node.isInAnd() || node.isInOr());
+            Assert.isTrue(MessageHelper.getMsg(w022,node.displayName(),NodeName.FORK_TASK),node.isInAnd() || node.isInOr());
         }
     }
 

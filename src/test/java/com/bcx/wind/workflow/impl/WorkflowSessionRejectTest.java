@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class WorkflowSessionRejectTest extends BaseTest {
 
-    String orderId = "350b603772ec429287d953167f4286ed";
+    String orderId = "b0ee8c043f584487a0fd08b2de87715a";
 
     @Test
     public void rejectOne(){
@@ -20,10 +20,48 @@ public class WorkflowSessionRejectTest extends BaseTest {
         Workflow workflow = session.reject(orderId,"edit",new DefaultUser().setUserId("10003").setUserName("张三"));
         System.out.println(System.currentTimeMillis()-start+" 毫秒");
         assert workflow != null;
+        commit();
+    }
+
+
+    @Test
+    public void rejectTwo(){
+        ObjectHelper.primaryKey();
+        WorkflowSession session = engine.openWorkflowSession("holiday");
+
+        long start = System.currentTimeMillis();
+        Workflow workflow = session.reject(orderId,"approveA",new DefaultUser().setUserId("100011").setUserName("孙悟空"));
+        System.out.println(System.currentTimeMillis()-start+" 毫秒");
+        assert workflow != null;
 
         commit();
     }
 
 
+    @Test
+    public void rejectThree(){
+        ObjectHelper.primaryKey();
+        WorkflowSession session = engine.openWorkflowSession("holiday");
+
+        long start = System.currentTimeMillis();
+        Workflow workflow = session.reject(orderId,"routerApprove",new DefaultUser().setUserId("10005").setUserName("孙悟空"));
+        System.out.println(System.currentTimeMillis()-start+" 毫秒");
+        assert workflow != null;
+
+        commit();
+    }
+
+
+    @Test
+    public void rejectFore(){
+        ObjectHelper.primaryKey();
+        WorkflowSession session = engine.openWorkflowSession("holiday");
+
+        long start = System.currentTimeMillis();
+        Workflow workflow = session.reject(orderId,"edit",new DefaultUser().setUserId("100012").setUserName("孙悟空"));
+        System.out.println(System.currentTimeMillis()-start+" 毫秒");
+        assert workflow != null;
+        commit();
+    }
 
 }

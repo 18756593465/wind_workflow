@@ -1,8 +1,9 @@
 package com.bcx.wind.workflow.core.flow;
 
 import com.bcx.wind.workflow.access.QueryFilter;
-import com.bcx.wind.workflow.core.constant.NodeName;
 import com.bcx.wind.workflow.core.constant.NodeType;
+import com.bcx.wind.workflow.core.constant.WorkflowOperate;
+import com.bcx.wind.workflow.core.constant.WorkflowOperateConstant;
 import com.bcx.wind.workflow.core.pojo.ApproveUser;
 import com.bcx.wind.workflow.core.pojo.DefaultUser;
 import com.bcx.wind.workflow.core.pojo.Task;
@@ -33,7 +34,8 @@ import static com.bcx.wind.workflow.core.constant.TaskType.ANY;
 import static com.bcx.wind.workflow.core.constant.TaskVariableKey.MIN_COUNT;
 import static com.bcx.wind.workflow.core.constant.TaskVariableKey.TASK_SUBMIT_USER;
 import static com.bcx.wind.workflow.core.constant.WorkflowOperateConstant.SUBMIT;
-import static com.bcx.wind.workflow.message.MsgConstant.*;
+import static com.bcx.wind.workflow.message.MsgConstant.w011;
+import static com.bcx.wind.workflow.message.MsgConstant.w017;
 
 /**
  * 任务节点
@@ -376,18 +378,15 @@ public class TaskNode extends BaseNode implements TaskModel{
      */
     @SuppressWarnings("unchecked")
     private  void  addTaskApproveUserToOrderVariable(boolean over){
-
+        if(!WorkflowOperateConstant.SUBMIT.equals(this.actuator.getOperate().name())){
+            return ;
+        }
+        OrderInstance instance = workflow().getOrderInstance();
+        Object approveUser = instance.getVariableMap().get(TASK_APPROVE_USER);
         //如果是子流程
         if(ROUTER.equals(this.parentNode.nodeType().value())){
-            List<OrderInstance> childs = workflow().getChildOrderInstance();
-            for(OrderInstance child : childs){
-
-                Object approveUser = child.getVariableMap().get(TASK_APPROVE_USER);
-                addTaskApproveUserToOrderVariable(approveUser,over,child);
-            }
+            addTaskApproveUserToOrderVariable(approveUser,over,instance);
         }else{
-            OrderInstance instance = workflow().getOrderInstance();
-            Object approveUser = instance.getVariableMap().get(TASK_APPROVE_USER);
             addTaskApproveUserToOrderVariable(approveUser,over,instance);
         }
     }
@@ -411,18 +410,31 @@ public class TaskNode extends BaseNode implements TaskModel{
             orderInstance.addValue(TASK_APPROVE_USER,taskApproveUser);
 
         }else{
-
             Map<String,List<String>> taskApproveUser = JsonHelper.coverObject(approveUser,Map.class,String.class,List.class);
             List<String> users = taskApproveUser.get(this.name);
             if(over){
                 List<String> actors = this.actuator.getActors();
                 if(users!=null){
+                   for(String userId :actors){
+                       if(!users.contains(userId)){
+                           users.add(userId);
+                       }
+                   }
+                }else{
+                    users = new LinkedList<>();
                     users.addAll(actors);
                 }
                 taskApproveUser.put(this.name,users);
-            }
-            if(users!=null) {
-                users.add(user.userId());
+
+            }else {
+                if(ObjectHelper.isEmpty(users)){
+                    users = new LinkedList<>();
+                    users.add(user.userId());
+                }else{
+                    if(!users.contains(user.userId())){
+                        users.add(user.userId());
+                    }
+                }
             }
             taskApproveUser.put(this.name,users);
             orderInstance.addValue(TASK_APPROVE_USER,taskApproveUser);
@@ -552,7 +564,6 @@ public class TaskNode extends BaseNode implements TaskModel{
 
         //添加执行历史履历
         addActiveResume(taskInstance,users);
-
         return taskInstance;
     }
 

@@ -2,6 +2,8 @@ package com.bcx.wind.workflow.core.flow;
 
 import com.bcx.wind.workflow.helper.ObjectHelper;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -226,6 +228,110 @@ public class ProcessModel extends BaseNode {
         return routerNodes;
     }
 
+
+    public List<TaskModel> getNextTasks(String curNodeId){
+        NodeModel curNode = getNodeModel(curNodeId);
+        if(ObjectHelper.isEmpty(curNode)){
+            return Collections.emptyList();
+        }
+
+        List<TaskModel> taskModels = new LinkedList<>();
+        addNextTasks(taskModels,curNode);
+        return taskModels;
+    }
+
+
+    private void  addNextTasks(List<TaskModel> taskModels,NodeModel curNode){
+        List<NodeModel> nextModels = curNode.nextNodes();
+        addRouterTasksToTaskModels(taskModels,nextModels);
+
+        for(NodeModel task : nextModels){
+            if(task instanceof TaskModel) {
+                if (!taskModels.contains(task)) {
+                    taskModels.add((TaskModel) task);
+                }
+                addNextTasks(taskModels,task);
+            }
+        }
+    }
+
+
+    public List<TaskModel> getLastTasks(String curNodeId){
+        NodeModel curNode = getNodeModel(curNodeId);
+        if(ObjectHelper.isEmpty(curNode)){
+            return Collections.emptyList();
+        }
+
+        List<TaskModel> taskModels = new LinkedList<>();
+        addLastTasks(taskModels,curNode);
+        return taskModels;
+    }
+
+
+
+
+    public void addLastTasks(List<TaskModel> taskModels,NodeModel curNode){
+        List<NodeModel> lastModels = curNode.lastNodes();
+        addRouterTasksToTaskModels(taskModels,lastModels);
+
+        for(NodeModel task : lastModels){
+            if(task instanceof TaskModel) {
+                if (!taskModels.contains(task)) {
+                    taskModels.add((TaskModel) task);
+                }
+            }
+            addLastTasks(taskModels,task);
+        }
+    }
+
+
+
+    private  void  addRouterTasksToTaskModels(List<TaskModel> taskModels,List<NodeModel> nodeModels){
+        for(NodeModel node  : nodeModels){
+            if(node instanceof RouterNode){
+                List<NodeModel> routerTasks = ((RouterNode) node).getAllTaskNodes();
+                for(NodeModel routerTask : routerTasks){
+                    if(!taskModels.contains(routerTask)){
+                        taskModels.add((TaskModel) routerTask);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /**
+     * 判断任务节点是否在指定节点后面
+     * @param curTask    指定任务节点
+     * @param nextTask   判断的任务节点
+     * @return           boolean
+     */
+    public boolean isNextTask(String curTask,String nextTask){
+        List<TaskModel> nextTasks = getNextTasks(curTask);
+        for(TaskModel taskModel : nextTasks){
+            if(taskModel.name().equals(nextTask)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 判断任务节点是否在指定节点前面
+     * @param curTask    指定任务节点
+     * @param lastTask   判断的任务节点
+     * @return           boolean
+     */
+    public boolean isLastTask(String curTask,String lastTask){
+        List<TaskModel> lastTasks = getLastTasks(curTask);
+        for(TaskModel taskModel : lastTasks){
+            if(taskModel.name().equals(lastTask)){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 
