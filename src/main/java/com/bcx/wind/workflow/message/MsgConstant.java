@@ -80,4 +80,7 @@ public class MsgConstant {
 
     /**w025 = 对不起，驳回任务不可为后续任务！**/
     public static final String w025 = "w025";
+
+    /**对不起，该业务数据尚未启动流程，请确认是否已经启动！**/
+    public static final String w026 = "wo26";
 }

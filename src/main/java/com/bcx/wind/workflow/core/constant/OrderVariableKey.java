@@ -15,4 +15,12 @@ public class OrderVariableKey {
     public static final String LAST_SUBMIT_TASK_NODE = "lastTaskSubmitTaskNode";
 
 
+    //保存撤销任务节点信息
+    public static final String REVOKE_VARIABLE = "revokeVariable";
+
+
+    public static final String REVOKE_NODE = "revokeNode";
+
+    public static final String NEW_TASK_ID = "newTaskId";
+
 }

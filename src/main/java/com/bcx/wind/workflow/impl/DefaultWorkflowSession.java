@@ -360,6 +360,53 @@ public  class DefaultWorkflowSession  implements WorkflowSession {
     }
 
     @Override
+    public Workflow revoke(List<String> businessId, DefaultUser user) {
+        WorkflowVariable variable = new WorkflowVariable()
+                .setBusinessId(businessId)
+                .setUser(user);
+        return revoke(variable);
+    }
+
+    @Override
+    public <T extends RevokeHandler> Workflow revoke(List<String> businessId, DefaultUser user, T handler) {
+        WorkflowVariable variable = new WorkflowVariable()
+                .setBusinessId(businessId)
+                .setUser(user);
+        return revoke(variable,handler);
+    }
+
+    @Override
+    public Workflow revoke(WorkflowVariable variable) {
+        MsgContent.getInstance().setContent(ErrorContant.Operate,"revoke workflow");
+
+        checkWithdrawArgs(variable);
+        try{
+            this.actuator.setDataMap(variable.getDataMap()).setOperate(WorkflowOperate.revoke).setVariable(variable);
+            this.executor = new RoutingExecutor(actuator);
+            return this.executor.revoke(variable);
+        }catch (Exception e){
+            logger.info(e.getMessage(),e);
+            throw new WorkflowException(e);
+        }
+    }
+
+    @Override
+    public <T extends RevokeHandler> Workflow revoke(WorkflowVariable variable, T handler) {
+        MsgContent.getInstance().setContent(ErrorContant.Operate,"revoke workflow");
+
+        checkWithdrawArgs(variable);
+        try{
+            this.actuator.setDataMap(variable.getDataMap()).setOperate(WorkflowOperate.revoke).setVariable(variable);
+            this.executor = new RoutingExecutor(actuator);
+            return this.executor.revoke(variable,handler);
+        }catch (Exception e){
+            logger.info(e.getMessage(),e);
+            throw new WorkflowException(e);
+        }
+    }
+
+
+    @Override
     public Workflow subScribe(WorkflowVariable variable) {
         MsgContent.getInstance().setContent(ErrorContant.Operate,"subScribe workflow");
         checkCompleteArgs(variable);

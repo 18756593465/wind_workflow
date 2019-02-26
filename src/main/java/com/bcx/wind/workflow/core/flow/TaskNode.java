@@ -26,8 +26,7 @@ import static com.bcx.wind.workflow.core.constant.Constant.AND;
 import static com.bcx.wind.workflow.core.constant.Constant.*;
 import static com.bcx.wind.workflow.core.constant.Constant.OR;
 import static com.bcx.wind.workflow.core.constant.NodeName.*;
-import static com.bcx.wind.workflow.core.constant.OrderVariableKey.LAST_SUBMIT_TASK_NODE;
-import static com.bcx.wind.workflow.core.constant.OrderVariableKey.TASK_APPROVE_USER;
+import static com.bcx.wind.workflow.core.constant.OrderVariableKey.*;
 import static com.bcx.wind.workflow.core.constant.TaskStatus.RUN;
 import static com.bcx.wind.workflow.core.constant.TaskType.ALL;
 import static com.bcx.wind.workflow.core.constant.TaskType.ANY;
@@ -93,7 +92,32 @@ public class TaskNode extends BaseNode implements TaskModel{
         }
         //执行后续
         if(this.next) {
+            addRevokeNodeVariable();
             next(null);
+        }
+    }
+
+
+    /**
+     * 添加撤销信息到流程实例变量中
+     */
+    @SuppressWarnings("unchecked")
+    private void addRevokeNodeVariable(){
+        TaskModel taskModel = this.task.getTaskModel();
+        //分支中的不可撤销
+        if(taskModel instanceof TaskNode && !((TaskNode) taskModel).inAnd
+                && !((TaskNode) taskModel).inOr) {
+
+            Object revokeMsg = workflow().getOrderInstance().getVariableMap().get(REVOKE_VARIABLE);
+            if (!ObjectHelper.isEmpty(revokeMsg)) {
+                Map<String, Object> args = JsonHelper.coverObject(revokeMsg, Map.class, String.class, Object.class);
+                args.put(REVOKE_NODE, this.task.getTaskName());
+                workflow().getOrderInstance().addValue(REVOKE_VARIABLE, args);
+            } else {
+                Map<String, Object> args = new HashMap<>();
+                args.put(REVOKE_NODE, this.task.getTaskName());
+                workflow().getOrderInstance().addValue(REVOKE_VARIABLE, args);
+            }
         }
     }
 
@@ -353,7 +377,7 @@ public class TaskNode extends BaseNode implements TaskModel{
             if(!ObjectHelper.isEmpty(instance)){
                 List<String> taskIds = instance.stream().map(TaskInstance::getId)
                         .collect(Collectors.toList());
-                List<String> actors = engine().runtimeService().taskService().getActorByTaskIds(taskIds.toArray(new String[taskIds.size()]));
+                List<DefaultUser> actors = engine().runtimeService().taskService().getActorByTaskIds(taskIds.toArray(new String[taskIds.size()]));
                 this.actuator.setActors(actors);
             }
 
@@ -382,20 +406,8 @@ public class TaskNode extends BaseNode implements TaskModel{
         }
         OrderInstance instance = workflow().getOrderInstance();
         Object approveUser = instance.getVariableMap().get(TASK_APPROVE_USER);
-        //如果是子流程
-        if(ROUTER.equals(this.parentNode.nodeType().value())){
-            addTaskApproveUserToOrderVariable(approveUser,over,instance);
-        }else{
-            addTaskApproveUserToOrderVariable(approveUser,over,instance);
-        }
-        //添加当前提交的节点，供后面撤回使用
-        addNowNodeIdToOrderInstance(instance);
-        engine().runtimeService().orderService().update(instance);
-    }
 
-
-    private void addNowNodeIdToOrderInstance(OrderInstance orderInstance){
-        orderInstance.getVariableMap().put(LAST_SUBMIT_TASK_NODE,this.task.getTaskModel().name());
+        addTaskApproveUserToOrderVariable(approveUser,over,instance);
     }
 
 
@@ -403,27 +415,28 @@ public class TaskNode extends BaseNode implements TaskModel{
     @SuppressWarnings("unchecked")
     private void addTaskApproveUserToOrderVariable(Object approveUser,boolean over,OrderInstance orderInstance){
         //用户
-        User user = workflow().getUser();
+        DefaultUser user = workflow().getUser();
 
         if(ObjectHelper.isEmpty(approveUser)){
-            Map<String,List<String>> taskApproveUser = new HashMap<>();
+            Map<String,List<DefaultUser>> taskApproveUser = new HashMap<>();
             if(over){
-                List<String> actors = this.actuator.getActors();
+                List<DefaultUser> actors = this.actuator.getActors();
                 taskApproveUser.put(this.name,actors);
             }else{
-                taskApproveUser.put(this.name,Collections.singletonList(user.userId()));
+                taskApproveUser.put(this.name,Collections.singletonList(user));
             }
             orderInstance.addValue(TASK_APPROVE_USER,taskApproveUser);
 
         }else{
-            Map<String,List<String>> taskApproveUser = JsonHelper.coverObject(approveUser,Map.class,String.class,List.class);
-            List<String> users = taskApproveUser.get(this.name);
+            Map<String,List<DefaultUser>> taskApproveUser = JsonHelper.coverObject(approveUser,Map.class,String.class,List.class);
+            List<DefaultUser> users = taskApproveUser.get(this.name);
+            users = JsonHelper.coverObject(users,List.class,DefaultUser.class);
             if(over){
-                List<String> actors = this.actuator.getActors();
+                List<DefaultUser> actors = this.actuator.getActors();
                 if(users!=null){
-                   for(String userId :actors){
-                       if(!users.contains(userId)){
-                           users.add(userId);
+                   for(DefaultUser u :actors){
+                       if(!users.contains(u)){
+                           users.add(u);
                        }
                    }
                 }else{
@@ -435,10 +448,10 @@ public class TaskNode extends BaseNode implements TaskModel{
             }else {
                 if(ObjectHelper.isEmpty(users)){
                     users = new LinkedList<>();
-                    users.add(user.userId());
+                    users.add(user);
                 }else{
-                    if(!users.contains(user.userId())){
-                        users.add(user.userId());
+                    if(!users.contains(user)){
+                        users.add(user);
                     }
                 }
             }
@@ -494,7 +507,6 @@ public class TaskNode extends BaseNode implements TaskModel{
         if(minCount != 0) {
             taskInstance.addVariable(MIN_COUNT, minCount);
         }
-        engine().runtimeService().taskService().updateTask(taskInstance);
     }
 
     /**
@@ -548,7 +560,7 @@ public class TaskNode extends BaseNode implements TaskModel{
         //审批人
         List<DefaultUser> users = new LinkedList<>();
         //添加审批人
-        if(SUBMIT.equals(this.actuator.getOperate())){
+        if(SUBMIT.equals(this.actuator.getOperate().name())){
             List<ApproveUser> approveUsers = this.actuator.getWorkflow().getVariable().getApproveUsers();
             Assert.notEmpty(MessageHelper.getMsg(w011),approveUsers);
 
@@ -557,10 +569,8 @@ public class TaskNode extends BaseNode implements TaskModel{
                 if(taskInstance.getTaskName().equals(nodeId)){
                     users = approveUser.getApproveUsers();
 
-                    List<String> actors = new LinkedList<>();
-                    for(User user : users){
-                        actors.add(user.userId());
-                    }
+                    List<DefaultUser> actors = new LinkedList<>();
+                    actors.addAll(users);
                     engine().runtimeService().taskService().addActor(taskId,actors);
                     break;
                 }

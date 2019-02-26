@@ -5,6 +5,7 @@ import com.bcx.wind.workflow.access.FlowPage;
 import com.bcx.wind.workflow.access.QueryFilter;
 import com.bcx.wind.workflow.core.constant.TaskStatus;
 import com.bcx.wind.workflow.core.constant.TaskType;
+import com.bcx.wind.workflow.core.pojo.DefaultUser;
 import com.bcx.wind.workflow.entity.TaskInstance;
 import com.bcx.wind.workflow.helper.ObjectHelper;
 import com.bcx.wind.workflow.helper.TimeHelper;
@@ -75,7 +76,7 @@ public class TaskInstanceServiceTest extends BaseTest {
         TaskInstance instance = taskInstance();
         String taskId = engine.runtimeService().taskService().createNewTask(instance);
 
-        int ret = engine.runtimeService().taskService().addActor(taskId,"10001");
+        int ret = engine.runtimeService().taskService().addActor(taskId,new DefaultUser().setUserId("10001"));
         assert ret >= 1;
     }
 
@@ -85,9 +86,9 @@ public class TaskInstanceServiceTest extends BaseTest {
         TaskInstance instance = taskInstance();
         String taskId = engine.runtimeService().taskService().createNewTask(instance);
 
-        List<String> actors = new LinkedList<>();
-        actors.add("10003");
-        actors.add("10004");
+        List<DefaultUser> actors = new LinkedList<>();
+        actors.add(new DefaultUser().setUserId("10001"));
+        actors.add(new DefaultUser().setUserId("10001"));
 
         int ret = engine.runtimeService().taskService().addActor(taskId,actors);
         assert ret >= 1;
@@ -99,8 +100,8 @@ public class TaskInstanceServiceTest extends BaseTest {
         TaskInstance instance = taskInstance();
         String taskId = engine.runtimeService().taskService().createNewTask(instance);
 
-        engine.runtimeService().taskService().addActor(taskId,"10001");
-        List<String> actors = engine.runtimeService().taskService().getActorByTaskId(taskId);
+        engine.runtimeService().taskService().addActor(taskId,new DefaultUser().setUserId("10001"));
+        List<DefaultUser> actors = engine.runtimeService().taskService().getActorByTaskId(taskId);
         System.out.println(actors.size());
         assert actors.size()>=1;
     }
@@ -129,7 +130,7 @@ public class TaskInstanceServiceTest extends BaseTest {
         TaskInstance instance = taskInstance();
         String taskId = engine.runtimeService().taskService().createNewTask(instance);
 
-        engine.runtimeService().taskService().addActor(taskId,"10001");
+        engine.runtimeService().taskService().addActor(taskId,new DefaultUser().setUserId("10001"));
 
         int ret = engine.runtimeService().taskService().removeActorByTaskIds(Collections.singletonList(taskId));
         assert ret >= 1;
@@ -165,9 +166,9 @@ public class TaskInstanceServiceTest extends BaseTest {
         TaskInstance instance = taskInstance();
         String taskId = engine.runtimeService().taskService().createNewTask(instance);
 
-        engine.runtimeService().taskService().addActor(taskId,"10001");
+        engine.runtimeService().taskService().addActor(taskId,new DefaultUser().setUserId("10001"));
 
-        List<String> actors = engine.runtimeService().taskService().getActorByTaskIds(new String[]{taskId});
+        List<DefaultUser> actors = engine.runtimeService().taskService().getActorByTaskIds(new String[]{taskId});
         System.out.println(actors.size());
     }
 

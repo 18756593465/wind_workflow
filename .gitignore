@@ -24,4 +24,4 @@ logs/fs/2018-09/debug.2018-09-11.0.log.gz
 logs/gmp_workflow/debug.log
 logs/gmp_workflow/error.log
 core/logs
-logs/
+log/

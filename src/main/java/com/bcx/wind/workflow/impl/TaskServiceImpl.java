@@ -5,9 +5,12 @@ import com.bcx.wind.workflow.AccessService;
 import com.bcx.wind.workflow.access.FlowPage;
 import com.bcx.wind.workflow.access.QueryFilter;
 import com.bcx.wind.workflow.core.TaskService;
+import com.bcx.wind.workflow.core.pojo.DefaultUser;
+import com.bcx.wind.workflow.core.pojo.User;
 import com.bcx.wind.workflow.entity.TaskActor;
 import com.bcx.wind.workflow.entity.TaskInstance;
 import com.bcx.wind.workflow.helper.Assert;
+import com.bcx.wind.workflow.helper.JsonHelper;
 import com.bcx.wind.workflow.helper.ObjectHelper;
 import com.bcx.wind.workflow.helper.TimeHelper;
 import com.bcx.wind.workflow.message.MessageHelper;
@@ -15,7 +18,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static com.bcx.wind.workflow.core.constant.Constant.JSON;
@@ -145,26 +150,28 @@ public class TaskServiceImpl extends AccessService implements TaskService {
     }
 
     @Override
-    public int addActor(String taskId, List<String> actors) {
+    public int addActor(String taskId, List<DefaultUser> actors) {
         getTaskInstance(taskId);
         Assert.hasEmpty("add taskActor ,but actors has empty",actors);
 
-        for(String actor : actors){
+        for(User actor : actors){
            access.insertTaskActor(new TaskActor()
                   .setTaskId(taskId)
-                  .setTaskActorId(actor));
+                  .setTaskActorId(actor.userId())
+                  .setActorVariable(JsonHelper.toJson(actor)));
         }
         return 1;
     }
 
     @Override
-    public int addActor(String taskId, String actor) {
+    public int addActor(String taskId, User user) {
         getTaskInstance(taskId);
-        Assert.notEmpty("add actor for task, but actor is null",actor);
+        Assert.isTrue("add actor for task, but actor is null",ObjectHelper.isEmpty(user) || ObjectHelper.isEmpty(user.userId()) );
 
         return access.insertTaskActor(new TaskActor()
                   .setTaskId(taskId)
-                  .setTaskActorId(actor));
+                  .setTaskActorId(user.userId())
+                  .setActorVariable(JsonHelper.toJson(user)));
     }
 
     @Override
@@ -174,29 +181,35 @@ public class TaskServiceImpl extends AccessService implements TaskService {
     }
 
     @Override
-    public List<String> getActorByTaskId(String taskId) {
+    public List<DefaultUser> getActorByTaskId(String taskId) {
         Assert.notEmpty("search taskActor by taskId, but taskId is null! search fail",taskId);
         List<TaskActor> actors = access.selectTaskActorList(new QueryFilter().setTaskId(taskId));
-
-        if(!ObjectHelper.isEmpty(actors)){
-            return actors.stream().map(TaskActor::getTaskActorId)
-                    .collect(Collectors.toList());
-        }
-
-        return Collections.emptyList();
+        return getUsersByActorVariable(actors);
     }
 
-    @Override
-    public List<String> getActorByTaskIds(String[] taskIds) {
-        Assert.hasEmpty("search taskActor by taskIds, but taskIds has null! search fail",taskIds);
-        
-        List<TaskActor> actors = access.selectTaskActorList(new QueryFilter().setTaskIds(taskIds));
-        if(!ObjectHelper.isEmpty(actors)){
-            return actors.stream().map(TaskActor::getTaskActorId)
-                    .collect(Collectors.toList());
-        }
 
-        return Collections.emptyList();
+    @Override
+    public List<DefaultUser> getActorByTaskIds(String[] taskIds) {
+        Assert.hasEmpty("search taskActor by taskIds, but taskIds has null! search fail",taskIds);
+        List<TaskActor> actors = access.selectTaskActorList(new QueryFilter().setTaskIds(taskIds));
+        return getUsersByActorVariable(actors);
+    }
+
+
+    private List<DefaultUser>  getUsersByActorVariable(List<TaskActor> actors){
+        List<DefaultUser> users = new LinkedList<>();
+        if(!ObjectHelper.isEmpty(actors)){
+            for(TaskActor actor : actors){
+                Map<String,Object> userMap = actor.getActorVariableMap();
+
+                if(!ObjectHelper.isEmpty(userMap)){
+                    DefaultUser user = JsonHelper.coverObject(userMap,DefaultUser.class);
+                    users.add(user);
+                }
+            }
+            return users;
+        }
+        return  Collections.emptyList();
     }
 
     @Override

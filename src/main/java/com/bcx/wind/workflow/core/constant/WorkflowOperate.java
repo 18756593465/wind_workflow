@@ -8,6 +8,7 @@ public enum  WorkflowOperate {
     scribe("订阅"),
     complete("完结"),
     withdraw("撤回"),
+    revoke("撤销"),
     transfer("转办");
 
     private String value;

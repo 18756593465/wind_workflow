@@ -47,8 +47,7 @@ public class ScribeTaskHandler extends BaseHandler implements Handler {
                     TaskInstance instance = createScribeTask();
                     engine().runtimeService().taskService().createNewTask(instance);
                     //审批人
-                    List<String> userIds = user.getApproveUsers().stream().map(DefaultUser::userId).collect(Collectors.toList());
-                    engine().runtimeService().taskService().addActor(instance.getId(),userIds);
+                    engine().runtimeService().taskService().addActor(instance.getId(),user.getApproveUsers());
 
                     //历史履历
                     ActiveHistory history = createActiveHistory(instance,approveUsers);

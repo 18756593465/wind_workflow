@@ -218,7 +218,8 @@ public class ProcessServiceImpl extends AccessService implements ProcessService 
     public int release(String processId) {
         ProcessDefinition definition = getProcessById(processId);
 
-        if(ProcessType.EDIT.equals(definition.getStatus())){
+        if(ProcessType.EDIT.equals(definition.getStatus())
+                || ProcessType.RECOVERY.equals(definition.getStatus())){
             //添加默认流程节点配置\
             addDefaultProcessConfig(definition.getProcessModel());
 
@@ -303,6 +304,8 @@ public class ProcessServiceImpl extends AccessService implements ProcessService 
 
         if(ProcessType.RELEASE.equals(definition.getStatus())){
             definition.setStatus(ProcessType.RECOVERY);
+            //删除配置数据
+            access.removeProcessConfigById(processId);
             return access.updateProcess(definition);
         }
         throw new WorkflowException(MessageHelper.getMsg(w009,processId));

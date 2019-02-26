@@ -108,7 +108,7 @@ public abstract class AbstractAccess implements Access {
 
 
     //任务审批人
-    private static final String TASK_ACTOR_INSERT = " insert into wind_task_actor(task_id,task_actor_id)values(?,?); ";
+    private static final String TASK_ACTOR_INSERT = " insert into wind_task_actor(task_id,task_actor_id,actor_variable)values(?,?,?); ";
 
     private static final String TASK_ACTOR_DELETE = " delete from wind_task_actor where ";
 
@@ -622,6 +622,13 @@ public abstract class AbstractAccess implements Access {
     }
 
     @Override
+    public int removeProcessConfigByProcessId(String processId){
+        String sql = PROCESS_CONFIG_DELETE + " process_id=? ";
+        Object[] args = new Object[]{processId};
+        return saveOrUpdate(sql,args);
+    }
+
+    @Override
     public ProcessConfig getProcessConfigById(String id) {
         String sql = PROCESS_CONFIG_SELECT + " id=? ";
         Object[] args = new Object[]{id};
@@ -647,7 +654,7 @@ public abstract class AbstractAccess implements Access {
 
     @Override
     public int insertTaskActor(TaskActor taskActor) {
-        Object[] args = new Object[]{taskActor.getTaskId(),taskActor.getTaskActorId()};
+        Object[] args = new Object[]{taskActor.getTaskId(),taskActor.getTaskActorId(),taskActor.getActorVariable()};
         return saveOrUpdate(TASK_ACTOR_INSERT,args);
     }
 

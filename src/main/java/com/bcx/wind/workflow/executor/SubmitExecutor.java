@@ -1,8 +1,6 @@
 package com.bcx.wind.workflow.executor;
 
 import com.bcx.wind.workflow.core.Actuator;
-import com.bcx.wind.workflow.core.constant.WorkflowOperate;
-import com.bcx.wind.workflow.core.constant.WorkflowOperateConstant;
 import com.bcx.wind.workflow.core.flow.NodeModel;
 import com.bcx.wind.workflow.core.pojo.Task;
 

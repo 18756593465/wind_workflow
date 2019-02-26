@@ -5,6 +5,7 @@ import com.bcx.wind.workflow.core.constant.TaskStatus;
 import com.bcx.wind.workflow.core.constant.TaskType;
 import com.bcx.wind.workflow.core.constant.WorkflowOperateConstant;
 import com.bcx.wind.workflow.core.flow.NodeModel;
+import com.bcx.wind.workflow.core.flow.TaskModel;
 import com.bcx.wind.workflow.core.flow.TaskNode;
 import com.bcx.wind.workflow.core.pojo.ApproveUser;
 import com.bcx.wind.workflow.core.pojo.DefaultUser;
@@ -18,13 +19,10 @@ import com.bcx.wind.workflow.helper.ObjectHelper;
 import com.bcx.wind.workflow.helper.TimeHelper;
 import com.bcx.wind.workflow.message.MessageHelper;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.*;
 
 import static com.bcx.wind.workflow.core.constant.Constant.JSON;
-import static com.bcx.wind.workflow.core.constant.OrderVariableKey.TASK_APPROVE_USER;
+import static com.bcx.wind.workflow.core.constant.OrderVariableKey.*;
 import static com.bcx.wind.workflow.core.constant.WorkflowOperateConstant.BUILD;
 import static com.bcx.wind.workflow.message.MsgConstant.w011;
 
@@ -61,7 +59,7 @@ public class TaskHandler extends BaseHandler implements Handler{
         }
 
         boolean createNewTask = false;
-        approveUsers = addApproveUser(approveUsers);
+        addApproveUser(approveUsers);
 
         Assert.notEmpty("submitWorkflow require parameters orderId user approveUsers has null!", approveUsers);
         for(ApproveUser user : approveUsers){
@@ -69,34 +67,71 @@ public class TaskHandler extends BaseHandler implements Handler{
             if(nodeId.equals(this.now.name())) {
                 createNewTask = true;
                 List<DefaultUser> users = user.getApproveUsers();
-                if (((TaskNode)now).isJointly()) {
+                if (now instanceof TaskNode && ((TaskNode)now).isJointly()) {
+                    //收集任务id集合
+                    List<String> taskIds = new LinkedList<>();
                     for (User u : users) {
                         //任务
                         TaskInstance instance = createNewTask(true);
+                        taskIds.add(instance.getId());
 
+                        //创建任务和审批人
                         engine().runtimeService().taskService().createNewTask(instance);
-                        engine().runtimeService().taskService().addActor(instance.getId(), u.userId());
+                        engine().runtimeService().taskService().addActor(instance.getId(), u);
 
                         //添加履历
                         createActiveHistory(true,instance.getId());
                         addWorkflowNextTaskInstance(instance);
                     }
+                    addRevokeTaskIdToOrder(taskIds);
 
                 } else {
                     //任务
                     TaskInstance instance = createNewTask(false);
 
+                    //创建任务和审批人
                     engine().runtimeService().taskService().createNewTask(instance);
-                    List<String> userIds = users.stream().map(User::userId).collect(Collectors.toList());
-                    engine().runtimeService().taskService().addActor(instance.getId(), userIds);
+                    engine().runtimeService().taskService().addActor(instance.getId(), users);
 
                     //添加履历
                     createActiveHistory(false,instance.getId());
+                    //设置任务实例到执行对象中
                     addWorkflowNextTaskInstance(instance);
+
+                    addRevokeTaskIdToOrder(Collections.singletonList(instance.getId()));
                 }
             }
         }
         Assert.isTrue(MessageHelper.getMsg(w011),!createNewTask);
+    }
+
+
+    /**
+     * 设置撤销信息  新的任务id集合
+     *
+     * @param taskIds  任务id集合
+     */
+    @SuppressWarnings("unchecked")
+    private void addRevokeTaskIdToOrder(List<String> taskIds){
+        if(ObjectHelper.isEmpty(this.task)){
+            return;
+        }
+        TaskModel taskModel = this.task.getTaskModel();
+        //分支中的任务不可撤销
+        if(taskModel instanceof TaskNode && !((TaskNode) taskModel).isInAnd()
+                && !((TaskNode) taskModel).isInOr()) {
+
+            Object revokeMsg = workflow().getOrderInstance().getVariableMap().get(REVOKE_VARIABLE);
+            if (!ObjectHelper.isEmpty(revokeMsg)) {
+                Map<String, Object> args = JsonHelper.coverObject(revokeMsg, Map.class, String.class, Object.class);
+                args.put(NEW_TASK_ID, taskIds);
+                workflow().getOrderInstance().addValue(REVOKE_VARIABLE, args);
+            } else {
+                Map<String, Object> args = new HashMap<>();
+                args.put(NEW_TASK_ID, taskIds);
+                workflow().getOrderInstance().addValue(REVOKE_VARIABLE, args);
+            }
+        }
     }
 
 
@@ -106,15 +141,13 @@ public class TaskHandler extends BaseHandler implements Handler{
             Object userObjs = workflow().getOrderInstance().getVariableMap().get(TASK_APPROVE_USER);
 
             if (!ObjectHelper.isEmpty(userObjs)) {
-                Map<String,List<String>> users = JsonHelper.coverObject(userObjs,Map.class,String.class,List.class);
-                for(Map.Entry<String,List<String>> user : users.entrySet()){
+                Map<String,List<DefaultUser>> userMaps = JsonHelper.coverObject(userObjs,Map.class,String.class,List.class);
+
+                for(Map.Entry<String,List<DefaultUser>> user : userMaps.entrySet()){
                     String nodeId = user.getKey();
-                    List<String> userIds = user.getValue();
-                    List<DefaultUser> defaultUsers = new LinkedList<>();
-                    for(String userId :userIds){
-                        defaultUsers.add(new DefaultUser().setUserId(userId));
-                    }
-                    approveUsers.add(new ApproveUser().setNodeId(nodeId).setApproveUsers(defaultUsers));
+                    List<DefaultUser> users = user.getValue();
+                    users = JsonHelper.coverObject(users,List.class,DefaultUser.class);
+                    approveUsers.add(new ApproveUser().setNodeId(nodeId).setApproveUsers(users));
                 }
             }
         }

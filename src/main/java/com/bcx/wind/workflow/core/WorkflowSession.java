@@ -1,8 +1,10 @@
 package com.bcx.wind.workflow.core;
 
-import com.bcx.wind.workflow.cache.DefaultCache;
 import com.bcx.wind.workflow.core.handler.*;
-import com.bcx.wind.workflow.core.pojo.*;
+import com.bcx.wind.workflow.core.pojo.ApproveUser;
+import com.bcx.wind.workflow.core.pojo.DefaultUser;
+import com.bcx.wind.workflow.core.pojo.Workflow;
+import com.bcx.wind.workflow.core.pojo.WorkflowVariable;
 
 import java.util.List;
 
@@ -87,8 +89,9 @@ public interface WorkflowSession {
      */
     <T extends SubmitHandler>Workflow  submit(String orderId,DefaultUser user,List<ApproveUser>  approveUsers,T handler);
 
+
     /**
-     * 退回工作流
+     * 退回工作流   退回工作流只能退回到以前的任务节点，且可以退回到任意以前节点
      *
      * @param variable   退回参数   orderId  businessId  dataMap  suggest   user
      * @return      workflow
@@ -125,7 +128,7 @@ public interface WorkflowSession {
 
 
     /**
-     * 撤回
+     * 撤回    撤回流程，撤回流程删除一切关于该流程的执行数据不包含历史，撤回流程后可以重新创建
      *
      * @param variable  businessId  user
      * @return    workflow
@@ -198,6 +201,46 @@ public interface WorkflowSession {
      */
     <T extends CompleteHandler>Workflow  complete(String orderId,DefaultUser user,T handler);
 
+
+    /**
+     * 撤销操作 ， 撤销到上一个任务节点 ，且只能撤销到上一个任务节点，如果当前节点已经被审批，则不能撤销
+     *
+     * @param businessId  业务ID
+     * @param user        当前用户
+     * @return            workflow
+     */
+    Workflow   revoke(List<String> businessId,DefaultUser user);
+
+
+    /**
+     * 撤销操作，添加前后置处理
+     *
+     * @param businessId   业务ID集合
+     * @param user         当前用户
+     * @param handler      前后置接口
+     * @param <T>          前后置处理实现类
+     * @return             结果workflow
+     */
+    <T extends RevokeHandler>Workflow revoke(List<String> businessId,DefaultUser user,T handler);
+
+
+    /**
+     * 撤销操作
+     *
+     * @param variable  撤回参数对象
+     * @return          workflow
+     */
+    Workflow  revoke(WorkflowVariable variable);
+
+
+    /**
+     * 撤销操作
+     * @param variable   撤回参数
+     * @param handler    前后置接口
+     * @param <T>        前后置接口实现
+     * @return           workflow
+     */
+    <T extends RevokeHandler>Workflow revoke(WorkflowVariable variable,T handler);
 
 
     /**

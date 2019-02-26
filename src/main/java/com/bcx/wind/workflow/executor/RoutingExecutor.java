@@ -40,6 +40,9 @@ public class RoutingExecutor implements Executor{
             case SCRIBE:
                 this.executor = new SubmitExecutor(actuator);
                 break;
+            case  REVOKE:
+                this.executor = new RevokeExecutor(actuator);
+                break;
                 default:
                     throw new WorkflowException("workflow operate "+operate+" is not exist !");
 
@@ -88,6 +91,16 @@ public class RoutingExecutor implements Executor{
     @Override
     public <T extends WithdrawHandler> Workflow withDraw(WorkflowVariable variable, T handler) {
         return executor.withDraw(variable,handler);
+    }
+
+    @Override
+    public Workflow revoke(WorkflowVariable variable) {
+        return executor.revoke(variable);
+    }
+
+    @Override
+    public <T extends RevokeHandler> Workflow revoke(WorkflowVariable variable, T handler) {
+        return executor.revoke(variable,handler);
     }
 
     @Override

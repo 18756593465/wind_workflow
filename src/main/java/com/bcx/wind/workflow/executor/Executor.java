@@ -80,7 +80,6 @@ public interface Executor {
 
 
 
-
     /**
      * 撤回
      *
@@ -91,6 +90,23 @@ public interface Executor {
 
 
 
+    /**
+     * 撤销
+     *
+     * @param variable   撤销参数
+     * @return           workflow
+     */
+    Workflow  revoke(WorkflowVariable variable);
+
+
+    /**
+     * 撤销操作
+     * @param variable  撤销参数
+     * @param handler   前后置处理器
+     * @param <T>       前后置实现
+     * @return          workflow
+     */
+    <T extends RevokeHandler>Workflow revoke(WorkflowVariable variable,T handler);
 
     /**
      * 完结

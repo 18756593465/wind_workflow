@@ -2,6 +2,9 @@ package com.bcx.wind.workflow.core;
 
 import com.bcx.wind.workflow.access.FlowPage;
 import com.bcx.wind.workflow.access.QueryFilter;
+import com.bcx.wind.workflow.core.pojo.DefaultUser;
+import com.bcx.wind.workflow.core.pojo.User;
+import com.bcx.wind.workflow.entity.TaskActor;
 import com.bcx.wind.workflow.entity.TaskInstance;
 
 import java.util.List;
@@ -99,7 +102,7 @@ public interface TaskService {
      * @param actor    任务审批人
      * @return         添加结果
      */
-    int   addActor(String taskId,List<String> actor);
+    int   addActor(String taskId,List<DefaultUser> actor);
 
 
     /**
@@ -109,7 +112,7 @@ public interface TaskService {
      * @param actor    审批人
      * @return         添加结果
      */
-    int   addActor(String taskId,String actor);
+    int   addActor(String taskId,User actor);
 
 
     /**
@@ -129,7 +132,7 @@ public interface TaskService {
      * @param taskId  任务ID
      * @return        审批人集合
      */
-    List<String>  getActorByTaskId(String taskId);
+    List<DefaultUser>  getActorByTaskId(String taskId);
 
     /**
      * 通过任务id集合查询任务审批人集合
@@ -137,7 +140,7 @@ public interface TaskService {
      * @param taskIds  任务id集合
      * @return  任务审批人集合
      */
-    List<String>  getActorByTaskIds(String[] taskIds);
+    List<DefaultUser>  getActorByTaskIds(String[] taskIds);
 
 
 

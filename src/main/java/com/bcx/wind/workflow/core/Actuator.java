@@ -5,6 +5,7 @@ import com.bcx.wind.workflow.core.constant.WorkflowOperate;
 import com.bcx.wind.workflow.core.constant.WorkflowOperateConstant;
 import com.bcx.wind.workflow.core.flow.ProcessModel;
 import com.bcx.wind.workflow.core.pojo.Configuration;
+import com.bcx.wind.workflow.core.pojo.DefaultUser;
 import com.bcx.wind.workflow.core.pojo.Workflow;
 import com.bcx.wind.workflow.core.pojo.WorkflowVariable;
 import com.bcx.wind.workflow.entity.OrderInstance;
@@ -62,7 +63,7 @@ public class Actuator {
     /**
      * 当前会签任务的审批人
      */
-    private List<String> actors = new LinkedList<>();
+    private List<DefaultUser> actors = new LinkedList<>();
 
     /**
      * 当前流程中正在执行的所有任务集合
@@ -177,11 +178,11 @@ public class Actuator {
         return this;
     }
 
-    public List<String> getActors() {
+    public List<DefaultUser> getActors() {
         return actors;
     }
 
-    public Actuator setActors(List<String> actors) {
+    public Actuator setActors(List<DefaultUser> actors) {
         this.actors = actors;
         return this;
     }

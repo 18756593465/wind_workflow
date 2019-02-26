@@ -287,4 +287,17 @@ public class DefaultUser implements User,Serializable {
         this.weight = weight;
         return this;
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof DefaultUser){
+            return ((DefaultUser) obj).getUserId().equals(this.userId);
+        }
+        return super.equals(obj);
+    }
 }

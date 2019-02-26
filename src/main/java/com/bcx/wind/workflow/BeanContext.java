@@ -1,5 +1,9 @@
 package com.bcx.wind.workflow;
 
+import com.bcx.wind.workflow.core.pojo.DefaultUser;
+import com.bcx.wind.workflow.core.pojo.User;
+import com.bcx.wind.workflow.core.pojo.Workflow;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -49,6 +53,5 @@ public class BeanContext implements Context {
     public Object remove(String key) {
         return this.map.remove(key);
     }
-
 
 }

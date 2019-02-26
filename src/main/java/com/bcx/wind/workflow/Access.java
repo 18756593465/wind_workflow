@@ -435,6 +435,15 @@ public interface Access {
 
 
     /**
+     * 通过流程id  删除所属配置数据
+     *
+     * @param processId  流程ID
+     * @return           删除结果
+     */
+    int  removeProcessConfigByProcessId(String processId);
+
+
+    /**
      * 通过主键查询单条流程配置信息
      *
      * @param id   主键

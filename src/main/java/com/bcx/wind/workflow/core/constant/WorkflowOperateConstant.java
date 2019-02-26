@@ -17,11 +17,16 @@ public class WorkflowOperateConstant {
     //撤回
     public static final String WITHDRAW = "withdraw";
 
+    //撤销
+    public static final String REVOKE = "revoke";
+
     //订阅
     public static final String SCRIBE = "scribe";
 
     //转办
     public static final String TRANSFER = "transfer";
+
+
 
 
 

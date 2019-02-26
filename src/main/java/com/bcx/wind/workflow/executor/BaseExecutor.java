@@ -19,6 +19,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.bcx.wind.workflow.core.constant.Constant.WIND_ADMIN;
 import static com.bcx.wind.workflow.core.constant.NodeName.PROCESS;
 import static com.bcx.wind.workflow.core.constant.NodeName.START;
 import static com.bcx.wind.workflow.message.MsgConstant.*;
@@ -83,6 +84,7 @@ public abstract class BaseExecutor implements Executor{
     public Workflow submit(WorkflowVariable variable) {
         addWorkflow(variable);
         this.executor();
+        updateOrderAndTask();
         return this.actuator.getWorkflow();
     }
 
@@ -99,6 +101,7 @@ public abstract class BaseExecutor implements Executor{
     @Override
     public Workflow reject(WorkflowVariable variable) {
         this.executor();
+        updateOrderAndTask();
         return this.actuator.getWorkflow();
     }
 
@@ -116,6 +119,7 @@ public abstract class BaseExecutor implements Executor{
     public Workflow withDraw(WorkflowVariable variable) {
         addWorkflow(variable);
         this.executor();
+        updateOrderAndTask();
         return this.actuator.getWorkflow();
     }
 
@@ -128,6 +132,22 @@ public abstract class BaseExecutor implements Executor{
         return this.actuator.getWorkflow();
     }
 
+
+    @Override
+    public Workflow revoke(WorkflowVariable variable) {
+        addWorkflow(variable);
+        this.executor();
+        updateOrderAndTask();
+        return this.actuator.getWorkflow();
+    }
+
+    @Override
+    public <T extends RevokeHandler> Workflow revoke(WorkflowVariable variable, T handler) {
+        handler.beforeRevokeHandler(this.actuator.getWorkflow());
+        revoke(variable);
+        handler.beforeRevokeHandler(this.actuator.getWorkflow());
+        return this.actuator.getWorkflow();
+    }
 
     @Override
     public Workflow complete(WorkflowVariable variable) {
@@ -155,6 +175,21 @@ public abstract class BaseExecutor implements Executor{
                 .setVariable(variable)
                 .setUser(variable.getUser())
                 .setDataMap(variable.getDataMap());
+    }
+
+
+    /**
+     * 更新流程实例信息和当前任务信息
+     */
+    private void updateOrderAndTask(){
+       Workflow workflow = workflow();
+       engine().runtimeService().orderService().update(workflow.getOrderInstance());
+
+       List<Task> tasks = workflow.getCurTask();
+       for(Task task : tasks){
+           TaskInstance instance = task.getTaskInstance();
+           engine().runtimeService().taskService().updateTask(instance);
+       }
     }
 
 
@@ -255,26 +290,25 @@ public abstract class BaseExecutor implements Executor{
             if(histories.size()<=1){
                 createCurTask(taskNode,taskInstances.get(0));
             }else{
-                filter.setTaskActorId(new String[]{user.userId()});
-                taskInstances = engine().runtimeService().taskService().queryList(filter);
-                Assert.notEmpty(MessageHelper.getMsg(w016,user.userName(),orderId),taskInstances);
-                for(TaskInstance taskInstance : taskInstances){
-                    String name = taskInstance.getTaskName();
-                    TaskModel node = this.actuator.getProcessModel().getTaskModel(name);
-                    createCurTask(node,taskInstance);
-                }
+                getCurTaskByActorId(user,filter,orderId,taskInstances);
             }
         }else{
+            getCurTaskByActorId(user,filter,orderId,taskInstances);
+        }
+    }
+
+
+    private void getCurTaskByActorId(User user,QueryFilter filter,String orderId,List<TaskInstance> taskInstances){
+        if(!WIND_ADMIN.equals(user.userId())) {
             filter.setTaskActorId(new String[]{user.userId()});
             taskInstances = engine().runtimeService().taskService().queryList(filter);
-            Assert.notEmpty(MessageHelper.getMsg(w016,user.userName(),orderId),taskInstances);
-            for(TaskInstance taskInstance : taskInstances){
-                String name = taskInstance.getTaskName();
-                TaskModel node = this.actuator.getProcessModel().getTaskModel(name);
-                createCurTask(node,taskInstance);
-            }
         }
-
+        Assert.notEmpty(MessageHelper.getMsg(w016,user.userName(),orderId),taskInstances);
+        for(TaskInstance taskInstance : taskInstances){
+            String name = taskInstance.getTaskName();
+            TaskModel node = this.actuator.getProcessModel().getTaskModel(name);
+            createCurTask(node,taskInstance);
+        }
     }
 
 
