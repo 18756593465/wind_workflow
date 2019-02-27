@@ -5,6 +5,7 @@ import com.bcx.wind.workflow.AccessService;
 import com.bcx.wind.workflow.access.FlowPage;
 import com.bcx.wind.workflow.access.QueryFilter;
 import com.bcx.wind.workflow.core.OrderService;
+import com.bcx.wind.workflow.core.constant.OrderType;
 import com.bcx.wind.workflow.entity.OrderBusiness;
 import com.bcx.wind.workflow.entity.OrderInstance;
 import com.bcx.wind.workflow.helper.Assert;
@@ -47,6 +48,32 @@ public class OrderServiceImpl extends AccessService implements OrderService {
     public OrderInstance queryOne(String id) {
         Assert.notEmpty(MessageHelper.getMsg(MsgConstant.w002,ORDER),id);
         return access.getOrderInstanceById(id);
+    }
+
+    @Override
+    public OrderInstance queryRunOne(String id) {
+        Assert.notEmpty(MessageHelper.getMsg(MsgConstant.w002,ORDER),id);
+        QueryFilter filter = new QueryFilter()
+                .setOrderId(id)
+                .setStatus(OrderType.RUN);
+        List<OrderInstance> orderInstances = access.selectOrderInstanceList(filter);
+        if(!ObjectHelper.isEmpty(orderInstances)){
+            return orderInstances.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public OrderInstance queryStopOne(String id) {
+        Assert.notEmpty(MessageHelper.getMsg(MsgConstant.w002,ORDER),id);
+        QueryFilter filter = new QueryFilter()
+                .setOrderId(id)
+                .setStatus(OrderType.STOP);
+        List<OrderInstance> orderInstances = access.selectOrderInstanceList(filter);
+        if(!ObjectHelper.isEmpty(orderInstances)){
+            return orderInstances.get(0);
+        }
+        return null;
     }
 
     @Override

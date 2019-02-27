@@ -3,6 +3,7 @@ package com.bcx.wind.workflow.executor;
 import com.bcx.wind.workflow.WorkflowEngine;
 import com.bcx.wind.workflow.access.QueryFilter;
 import com.bcx.wind.workflow.core.Actuator;
+import com.bcx.wind.workflow.core.constant.TaskStatus;
 import com.bcx.wind.workflow.core.constant.WorkflowOperateConstant;
 import com.bcx.wind.workflow.core.flow.*;
 import com.bcx.wind.workflow.core.handler.*;
@@ -11,6 +12,7 @@ import com.bcx.wind.workflow.entity.ActiveHistory;
 import com.bcx.wind.workflow.entity.OrderBusiness;
 import com.bcx.wind.workflow.entity.OrderInstance;
 import com.bcx.wind.workflow.entity.TaskInstance;
+import com.bcx.wind.workflow.exception.WorkflowException;
 import com.bcx.wind.workflow.helper.Assert;
 import com.bcx.wind.workflow.helper.ObjectHelper;
 import com.bcx.wind.workflow.message.MessageHelper;
@@ -166,7 +168,6 @@ public abstract class BaseExecutor implements Executor{
     }
 
 
-
     private void addWorkflow(WorkflowVariable variable){
         workflow().setSystem(variable.getSystem())
                 .setOrderId(variable.getOrderId())
@@ -276,7 +277,8 @@ public abstract class BaseExecutor implements Executor{
 
         //流程下的用户集合
         QueryFilter filter = new QueryFilter()
-                .setOrderId(orderId);
+                .setOrderId(orderId)
+                .setStatus(TaskStatus.RUN);
         List<TaskInstance> taskInstances = engine().runtimeService().taskService().queryList(filter);
         Assert.notEmpty(MessageHelper.getMsg(w015,orderId),taskInstances);
 
@@ -325,14 +327,14 @@ public abstract class BaseExecutor implements Executor{
     protected   void  buildOrderInstance(){
         String orderId = variable().getOrderId();
         //流程实例
-        OrderInstance orderInstance = engine().runtimeService().orderService().queryOne(orderId);
+        OrderInstance orderInstance = engine().runtimeService().orderService().queryRunOne(orderId);
         Assert.notEmpty(MessageHelper.getMsg(w014,orderId),orderInstance);
 
         String parentOrderId = orderInstance.getParentId();
         int i=0;
         while(i<5) {
             if (!ObjectHelper.isEmpty(parentOrderId)) {
-                orderInstance = engine().runtimeService().orderService().queryOne(parentOrderId);
+                orderInstance = engine().runtimeService().orderService().queryRunOne(parentOrderId);
                 Assert.notEmpty(MessageHelper.getMsg(w014,orderId),orderInstance);
                 parentOrderId = orderInstance.getParentId();
                 if(ObjectHelper.isEmpty(parentOrderId)){
@@ -356,6 +358,25 @@ public abstract class BaseExecutor implements Executor{
     }
 
 
+    protected void buildMainOrder(){
+        List<String> businessIds = variable().getBusinessId();
+        QueryFilter filter = new QueryFilter()
+                .setBusinessId(businessIds);
+        if(!ObjectHelper.isEmpty(variable().getSystem())){
+            filter.setSystem(variable().getSystem());
+        }
+        List<OrderBusiness> businesses = engine().runtimeService().orderService().
+                queryOrderBusiness(filter);
+        if(!ObjectHelper.isEmpty(businesses)){
+            OrderInstance orderInstance = engine().runtimeService().orderService().queryOne(businesses.get(0).getOrderId());
+            this.actuator.setOrderInstance(orderInstance);
+            this.actuator.getWorkflow().setOrderId(orderInstance.getId()).setOrderInstance(orderInstance);
+            return;
+        }
+        throw new WorkflowException(MessageHelper.getMsg(w026));
+    }
+
+
     protected void buildWorkflow(){
         //查询流程实例
         if(!WorkflowOperateConstant.REJECT.equals(this.actuator.getOperate().name())) {
@@ -370,6 +391,7 @@ public abstract class BaseExecutor implements Executor{
             buildCurTask();
         }
     }
+
 
     protected DefaultUser user(){
         return workflow().getUser();

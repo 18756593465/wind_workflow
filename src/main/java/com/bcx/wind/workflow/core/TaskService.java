@@ -143,6 +143,16 @@ public interface TaskService {
     List<DefaultUser>  getActorByTaskIds(String[] taskIds);
 
 
+    /**
+     * 通过审批人ID 查询任务审批人数据集合
+     *
+     * @param userId   审批人ID
+     * @return         审批人数据集合
+     */
+    List<TaskActor> getTaskActorByActorId(String userId);
+
+
+
 
     /**
      * 通过任务id查询任务
@@ -151,6 +161,25 @@ public interface TaskService {
      * @return        任务实例
      */
     TaskInstance  getTaskById(String taskId);
+
+
+    /**
+     * 通过任务id查询正在运行的任务
+     *
+     * @param taskId  任务id
+     * @return        任务实例
+     */
+    TaskInstance  getRunTaskById(String taskId);
+
+
+    /**
+     * 通过任务id查询正在暂停的任务
+     *
+     * @param taskId  任务id
+     * @return        任务实例
+     */
+    TaskInstance  getStopTaskById(String taskId);
+
 
 
     /**

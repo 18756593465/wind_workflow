@@ -2,8 +2,10 @@ package com.bcx.wind.workflow;
 
 import com.bcx.wind.workflow.access.QueryFilter;
 import com.bcx.wind.workflow.core.Actuator;
+import com.bcx.wind.workflow.core.WorkflowService;
 import com.bcx.wind.workflow.core.WorkflowSession;
 import com.bcx.wind.workflow.core.pojo.Configuration;
+import com.bcx.wind.workflow.core.pojo.ManagerData;
 import com.bcx.wind.workflow.core.pojo.NodeConfig;
 import com.bcx.wind.workflow.core.pojo.Workflow;
 import com.bcx.wind.workflow.entity.ProcessConfig;
@@ -11,6 +13,7 @@ import com.bcx.wind.workflow.entity.ProcessDefinition;
 import com.bcx.wind.workflow.helper.Assert;
 import com.bcx.wind.workflow.helper.ObjectHelper;
 import com.bcx.wind.workflow.impl.DefaultWorkflowSession;
+import com.bcx.wind.workflow.impl.WorkflowServiceImpl;
 
 import java.util.List;
 import java.util.Map;
@@ -96,6 +99,13 @@ public class WorkflowEngineImpl implements WorkflowEngine {
                         .setProcessConfig(configuration));
 
         return  new DefaultWorkflowSession(actuator);
+    }
+
+    @Override
+    public WorkflowService openWorkflowService() {
+        ManagerData data = new ManagerData()
+                .setEngine(this);
+        return new WorkflowServiceImpl(data);
     }
 
     @Override

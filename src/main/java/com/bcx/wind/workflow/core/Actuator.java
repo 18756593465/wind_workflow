@@ -2,7 +2,6 @@ package com.bcx.wind.workflow.core;
 
 import com.bcx.wind.workflow.WorkflowEngine;
 import com.bcx.wind.workflow.core.constant.WorkflowOperate;
-import com.bcx.wind.workflow.core.constant.WorkflowOperateConstant;
 import com.bcx.wind.workflow.core.flow.ProcessModel;
 import com.bcx.wind.workflow.core.pojo.Configuration;
 import com.bcx.wind.workflow.core.pojo.DefaultUser;

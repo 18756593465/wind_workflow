@@ -15,7 +15,7 @@ public class WorkflowSessionRejectTest extends BaseTest {
         WorkflowSession session = engine.openWorkflowSession("holiday");
 
         long start = System.currentTimeMillis();
-        Workflow workflow = session.reject(orderId,"edit",new DefaultUser().setUserId("10003").setUserName("张三"));
+        Workflow workflow = session.reject(orderId,"edit",new DefaultUser().setUserId("10003").setUserName("季婷"));
         System.out.println(System.currentTimeMillis()-start+" 毫秒");
         assert workflow != null;
         commit();

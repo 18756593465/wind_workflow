@@ -29,6 +29,24 @@ public interface OrderService {
     OrderInstance  queryOne(String id);
 
 
+    /**
+     * 通过流程实例ID查询正在运行的流程实例
+     *
+     * @param id  流程实例号
+     * @return    流程实例
+     */
+    OrderInstance  queryRunOne(String id);
+
+
+    /**
+     * 通过流程实例ID查询暂停的流程实例
+     *
+     * @param id   流程实例号
+     * @return     流程实例
+     */
+    OrderInstance  queryStopOne(String id);
+
+
     String insert(OrderInstance orderInstance);
 
 

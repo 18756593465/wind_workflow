@@ -1,5 +1,6 @@
 package com.bcx.wind.workflow;
 
+import com.bcx.wind.workflow.core.WorkflowService;
 import com.bcx.wind.workflow.core.WorkflowSession;
 
 /**
@@ -39,10 +40,19 @@ public interface WorkflowEngine {
 
 
     /**
+     * 主要功能：  创建流程 ，提交流程，退回流程，撤销流程，撤回流程，完结流程。
      *
      * @return 工作流核心接口
      */
     WorkflowSession openWorkflowSession(String processName);
+
+
+    /**
+     * 工作流辅助功能接口
+     *
+     * @return 辅助接口  主要实现转办关闭  暂停恢复流程  流程监控查询等
+     */
+    WorkflowService openWorkflowService();
 
 
     /**

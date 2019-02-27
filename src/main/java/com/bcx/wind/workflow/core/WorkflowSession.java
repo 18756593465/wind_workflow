@@ -1,10 +1,7 @@
 package com.bcx.wind.workflow.core;
 
 import com.bcx.wind.workflow.core.handler.*;
-import com.bcx.wind.workflow.core.pojo.ApproveUser;
-import com.bcx.wind.workflow.core.pojo.DefaultUser;
-import com.bcx.wind.workflow.core.pojo.Workflow;
-import com.bcx.wind.workflow.core.pojo.WorkflowVariable;
+import com.bcx.wind.workflow.core.pojo.*;
 
 import java.util.List;
 
@@ -278,8 +275,5 @@ public interface WorkflowSession {
      * @return         完结结果
      */
     <T extends SubmitHandler>Workflow  subScribe(String orderId,DefaultUser user,T handler);
-
-
-
 
 }

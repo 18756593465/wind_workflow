@@ -27,6 +27,11 @@ public class QueryFilter {
     private String  orderId;
 
     /**
+     * 流程实例号数组
+     */
+    private String[] orderIds;
+
+    /**
      * 任务ID
      */
     private String  taskId;
@@ -313,6 +318,15 @@ public class QueryFilter {
 
     public QueryFilter setTaskType(String taskType) {
         this.taskType = taskType;
+        return this;
+    }
+
+    public String[] getOrderIds() {
+        return orderIds;
+    }
+
+    public QueryFilter setOrderIds(String[] orderIds) {
+        this.orderIds = orderIds;
         return this;
     }
 }

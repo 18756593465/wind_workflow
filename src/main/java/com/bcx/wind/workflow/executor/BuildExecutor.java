@@ -10,12 +10,16 @@ import com.bcx.wind.workflow.core.pojo.Task;
 import com.bcx.wind.workflow.core.pojo.WorkflowVariable;
 import com.bcx.wind.workflow.entity.OrderBusiness;
 import com.bcx.wind.workflow.entity.OrderInstance;
+import com.bcx.wind.workflow.helper.Assert;
 import com.bcx.wind.workflow.helper.JsonHelper;
 import com.bcx.wind.workflow.helper.ObjectHelper;
 import com.bcx.wind.workflow.helper.TimeHelper;
+import com.bcx.wind.workflow.message.MessageHelper;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import static com.bcx.wind.workflow.message.MsgConstant.w027;
 
 /**
  * 启动创建执行
@@ -39,7 +43,7 @@ public class BuildExecutor extends BaseExecutor {
         checkSameOperate(variable());
 
         //构建流程实例
-        createMainOrder(variable());
+        createMainOrder();
 
         //构建当前任务
         if(!this.isBuild) {
@@ -94,48 +98,57 @@ public class BuildExecutor extends BaseExecutor {
      * @param variable  参数
      */
     private void checkSameOperate(WorkflowVariable variable){
-        //数据并发重复
+        //数据并发重复 5秒内
         List<String> businessIds = variable.getBusinessId();
         BusinessLock.execute(new Content(businessIds));
     }
 
 
-
     /**
      * 创建主流程实例
      *
-     * @param variable  参数
      */
-    private void createMainOrder(WorkflowVariable variable){
-        ProcessModel model = actuator.getProcessModel();
-
+    private void createMainOrder(){
         //已经存在
-        List<String> businessIds = variable.getBusinessId();
+        List<String> businessIds = variable().getBusinessId();
         QueryFilter filter = new QueryFilter()
                 .setBusinessId(businessIds);
-        if(!ObjectHelper.isEmpty(variable.getSystem())){
-            filter.setSystem(variable.getSystem());
+        if(!ObjectHelper.isEmpty( variable().getSystem())){
+            filter.setSystem( variable().getSystem());
         }
         List<OrderBusiness> businesses = engine().runtimeService().orderService().
                 queryOrderBusiness(filter);
         if(!ObjectHelper.isEmpty(businesses)){
-            this.isBuild = false;
             OrderInstance orderInstance = engine().runtimeService().orderService().queryOne(businesses.get(0).getOrderId());
+            if (ObjectHelper.isEmpty(orderInstance)) {
+                createOrderInstance(businessIds,businesses.get(0).getOrderId());
+                return;
+            }
+            Assert.isTrue(MessageHelper.getMsg(w027),OrderType.STOP.equals(orderInstance.getStatus()));
+
+            this.isBuild = false;
             this.actuator.setOrderInstance(orderInstance);
             this.actuator.getWorkflow().setOrderId(orderInstance.getId()).setOrderInstance(orderInstance);
             return;
         }
+        createOrderInstance(businessIds,null);
+    }
 
+
+
+    private  void  createOrderInstance(List<String> businessIds,String orderId){
+        ProcessModel model = actuator.getProcessModel();
+        String id = ObjectHelper.isEmpty(orderId) ? ObjectHelper.primaryKey() : orderId;
         //新建
         OrderInstance orderInstance = new OrderInstance()
-                .setId(ObjectHelper.primaryKey())
-                .setData(JsonHelper.toJson(variable.getDataMap()))
+                .setId(id)
+                .setData(JsonHelper.toJson( variable().getDataMap()))
                 .setProcessId(model.getProcessId())
                 .setStatus(OrderType.RUN)
-                .setCreateUser(variable.getUser().userId())
+                .setCreateUser(variable().getUser().userId())
                 .setCreateTime(TimeHelper.getNow())
                 .setVersion(1)
-                .setSystem(variable.getSystem());
+                .setSystem(variable().getSystem());
 
         engine().runtimeService().orderService().insert(orderInstance);
 
@@ -146,7 +159,7 @@ public class BuildExecutor extends BaseExecutor {
 
         //新增业务id关联流程实例
         engine().runtimeService().orderService()
-                .insertOrderBusiness(businessIds,orderInstance.getId(),variable.getSystem());
+                .insertOrderBusiness(businessIds,orderInstance.getId(), variable().getSystem());
     }
 
 

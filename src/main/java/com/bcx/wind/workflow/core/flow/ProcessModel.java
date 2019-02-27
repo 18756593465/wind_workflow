@@ -259,7 +259,10 @@ public class ProcessModel extends BaseNode {
     public List<TaskModel> getLastTasks(String curNodeId){
         NodeModel curNode = getNodeModel(curNodeId);
         if(ObjectHelper.isEmpty(curNode)){
-            return Collections.emptyList();
+            curNode = getTaskModel(curNodeId);
+            if(ObjectHelper.isEmpty(curNode)) {
+                return Collections.emptyList();
+            }
         }
 
         List<TaskModel> taskModels = new LinkedList<>();

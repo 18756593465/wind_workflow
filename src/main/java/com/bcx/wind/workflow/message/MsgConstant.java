@@ -45,7 +45,7 @@ public class MsgConstant {
     /**对不起【${0}】,流程【${1}】暂时没有您的任务！**/
     public static final String w013 = "w013";
 
-    /**对不起，流程实例号【${0}】没有对应的额流程数据，请确认流程实例是否存在，或者错误手动操作数据库**/
+    /**对不起，流程实例号【${0}】没有对应的流程数据，请确认流程实例是否存在，或者错误手动操作数据库**/
     public static final String w014 = "w014";
 
     /**对不起，流程实例号【${0}】没有任务实例，请确认是否手动操作数据库**/
@@ -83,4 +83,13 @@ public class MsgConstant {
 
     /**对不起，该业务数据尚未启动流程，请确认是否已经启动！**/
     public static final String w026 = "wo26";
+
+    /**对不起，该流程正处于暂停状态，请恢复流程后在进行操作！**/
+    public static final String w027 = "w027";
+
+    /**转办失败！缺少旧审批人或者新审批人信息**/
+    public static final String w028 = "w028";
+
+    /**转办失败！旧审批人不可和新审批人相同！**/
+    public static final String w029 = "w029";
 }

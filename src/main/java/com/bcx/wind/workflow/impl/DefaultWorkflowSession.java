@@ -450,5 +450,4 @@ public  class DefaultWorkflowSession  implements WorkflowSession {
         return subScribe(variable,handler);
     }
 
-
 }

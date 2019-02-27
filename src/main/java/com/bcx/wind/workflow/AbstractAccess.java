@@ -828,6 +828,16 @@ public abstract class AbstractAccess implements Access {
             sql.append(" 1!=1) ");
         }
 
+        String[] orderIds = filter.getOrderIds();
+        if(!ObjectHelper.isEmpty(orderIds)){
+            sql.append(" and (");
+            for(String id : orderIds){
+                sql.append(" order_id=? or ");
+                args.addLast(id);
+            }
+            sql.append(" 1!=1) ");
+        }
+
         String createTimeStart = filter.getCreateTimeStart();
         String createTimeEnd = filter.getCreateTimeEnd();
         if(!ObjectHelper.hasEmpty(createTimeEnd,createTimeStart)){
@@ -856,6 +866,22 @@ public abstract class AbstractAccess implements Access {
         LinkedList<Object> args = new LinkedList<>();
 
         sql.append(" 1=1 ");
+
+        String orderId = filter.getOrderId();
+        if(!ObjectHelper.isEmpty(orderId)){
+            sql.append(" and id=? ");
+            args.addLast(orderId);
+        }
+
+        String[] orderIds = filter.getOrderIds();
+        if(!ObjectHelper.isEmpty(orderIds)){
+            sql.append(" and (");
+            for(String id : orderIds){
+                sql.append(" order_id=? or ");
+                args.addLast(id);
+            }
+            sql.append(" 1!=1) ");
+        }
 
         String processId = filter.getProcessId();
         if(!ObjectHelper.isEmpty(processId)){
@@ -966,12 +992,12 @@ public abstract class AbstractAccess implements Access {
 
         String[] approveUsers = queryFilter.getTaskActorId();
         if(!ObjectHelper.isEmpty(approveUsers)){
-            sql.append(" and(");
+            sql.append(" and( ");
             for(String  user :approveUsers){
-                sql.append(" task_actor_id=? or");
+                sql.append(" task_actor_id=? or ");
                 args.addLast(user);
             }
-            sql.append("1!=1)");
+            sql.append(" 1!=1) ");
         }
 
         return args.toArray();
@@ -1061,6 +1087,16 @@ public abstract class AbstractAccess implements Access {
         if(!ObjectHelper.isEmpty(orderId)){
             sql.append(" and order_id=? ");
             args.addLast(orderId);
+        }
+
+        String[] orderIds = queryFilter.getOrderIds();
+        if(!ObjectHelper.isEmpty(orderIds)){
+            sql.append(" and (");
+            for(String id : orderIds){
+                sql.append(" order_id=? or ");
+                args.addLast(id);
+            }
+            sql.append(" 1!=1) ");
         }
 
 

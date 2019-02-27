@@ -1,0 +1,703 @@
+2019-02-26 18:49:23.197 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@209da20d
+2019-02-26 18:49:29.319 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.469 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.508 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.537 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.549 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.569 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.577 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.585 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.602 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.609 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.621 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.631 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.638 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.647 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.661 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.709 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 18:49:29.717 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:51.520 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@209da20d
+2019-02-26 19:00:55.329 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.419 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.437 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.463 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.481 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.494 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.507 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.517 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.526 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.553 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.566 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.577 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:00:55.681 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.helper.Assert : 28 ] - 对不起，流程实例号【b0ee8c043f584487a0fd08b2de87715a】没有对应的额流程数据，请确认流程实例是否存在，或者错误手动操作数据库
+2019-02-26 19:00:55.692 [ main ] - [ INFO  ] [ com.bcx.wind.workflow.impl.DefaultWorkflowSession : 140 ] - 对不起，流程实例号【b0ee8c043f584487a0fd08b2de87715a】没有对应的额流程数据，请确认流程实例是否存在，或者错误手动操作数据库
+com.bcx.wind.workflow.exception.WorkflowException: 对不起，流程实例号【b0ee8c043f584487a0fd08b2de87715a】没有对应的额流程数据，请确认流程实例是否存在，或者错误手动操作数据库
+	at com.bcx.wind.workflow.helper.Assert.notEmpty(Assert.java:30) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.buildOrderInstance(BaseExecutor.java:329) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.buildWorkflow(BaseExecutor.java:362) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.SubmitExecutor.executor(SubmitExecutor.java:21) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.submit(BaseExecutor.java:86) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.submit(RoutingExecutor.java:65) ~[classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.submit(DefaultWorkflowSession.java:138) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.submit(DefaultWorkflowSession.java:177) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionSubmitTest.submitOne(WorkflowSessionSubmitTest.java:220) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:02:07.726 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@209da20d
+2019-02-26 19:02:10.337 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:02:10.417 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:02:10.435 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:02:10.463 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:02:10.492 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:02:10.504 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:02:10.518 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:02:10.534 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:02:10.543 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:02:10.604 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:02:10.614 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:02:10.623 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:17:14.983 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 19:19:13.489 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 19:21:55.150 [ main ] - [ INFO  ] [ com.bcx.wind.workflow.impl.DefaultWorkflowSession : 388 ] - java.util.LinkedHashMap cannot be cast to com.bcx.wind.workflow.core.pojo.User
+java.lang.ClassCastException: java.util.LinkedHashMap cannot be cast to com.bcx.wind.workflow.core.pojo.User
+	at com.bcx.wind.workflow.impl.TaskServiceImpl.addActor(TaskServiceImpl.java:157) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.buildTask(TaskHandler.java:94) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.handler(TaskHandler.java:43) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revokeOperate(RevokeExecutor.java:122) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revoke(RevokeExecutor.java:93) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.executor(RevokeExecutor.java:48) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:139) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) ~[classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:22:51.914 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 19:25:56.488 [ main ] - [ INFO  ] [ com.bcx.wind.workflow.impl.DefaultWorkflowSession : 388 ] - java.util.LinkedHashMap cannot be cast to com.bcx.wind.workflow.core.pojo.User
+java.lang.ClassCastException: java.util.LinkedHashMap cannot be cast to com.bcx.wind.workflow.core.pojo.User
+	at com.bcx.wind.workflow.impl.TaskServiceImpl.addActor(TaskServiceImpl.java:157) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.buildTask(TaskHandler.java:94) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.handler(TaskHandler.java:43) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revokeOperate(RevokeExecutor.java:122) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revoke(RevokeExecutor.java:93) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.executor(RevokeExecutor.java:48) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:139) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) ~[classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:26:06.006 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 19:26:47.271 [ main ] - [ INFO  ] [ com.bcx.wind.workflow.impl.DefaultWorkflowSession : 388 ] - java.util.LinkedHashMap cannot be cast to com.bcx.wind.workflow.core.pojo.User
+java.lang.ClassCastException: java.util.LinkedHashMap cannot be cast to com.bcx.wind.workflow.core.pojo.User
+	at com.bcx.wind.workflow.impl.TaskServiceImpl.addActor(TaskServiceImpl.java:157) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.buildTask(TaskHandler.java:94) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.handler(TaskHandler.java:43) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revokeOperate(RevokeExecutor.java:122) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revoke(RevokeExecutor.java:93) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.executor(RevokeExecutor.java:48) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:139) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) ~[classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:27:08.605 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 19:28:52.788 [ main ] - [ INFO  ] [ com.bcx.wind.workflow.impl.DefaultWorkflowSession : 388 ] - java.util.LinkedHashMap cannot be cast to com.bcx.wind.workflow.core.pojo.User
+java.lang.ClassCastException: java.util.LinkedHashMap cannot be cast to com.bcx.wind.workflow.core.pojo.User
+	at com.bcx.wind.workflow.impl.TaskServiceImpl.addActor(TaskServiceImpl.java:157) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.buildTask(TaskHandler.java:94) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.handler(TaskHandler.java:43) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revokeOperate(RevokeExecutor.java:122) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revoke(RevokeExecutor.java:93) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.executor(RevokeExecutor.java:48) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:139) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) ~[classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:29:17.691 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 19:29:44.889 [ main ] - [ INFO  ] [ com.bcx.wind.workflow.impl.DefaultWorkflowSession : 388 ] - java.util.LinkedHashMap cannot be cast to com.bcx.wind.workflow.core.pojo.User
+java.lang.ClassCastException: java.util.LinkedHashMap cannot be cast to com.bcx.wind.workflow.core.pojo.User
+	at com.bcx.wind.workflow.impl.TaskServiceImpl.addActor(TaskServiceImpl.java:157) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.buildTask(TaskHandler.java:94) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.handler(TaskHandler.java:43) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revokeOperate(RevokeExecutor.java:122) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revoke(RevokeExecutor.java:93) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.executor(RevokeExecutor.java:48) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:139) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) ~[classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:30:38.794 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 19:30:57.545 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.jdbc.JdbcAccess : 62 ] - 错误: 重复键违反唯一约束"wind_task_actor_pkey"
+  详细：键值"(task_actor_id)=(10003)" 已经存在 Query:  insert into wind_task_actor(task_id,task_actor_id,actor_variable)values(?,?,?);  Parameters: [6066e8b158f541c5bc35c2742ab76e89, 10003, {"userId":"10003","userName":"周三","nickName":null,"status":null,"group":null,"idCard":null,"mobilePhone":null,"officePhone":null,"email":null,"gender":null,"job":null,"hireDate":null,"age":null,"height":null,"qq":null,"boss":null,"company":null,"school":null,"local":null,"homeTown":null,"birthday":null,"remark":null,"description":null,"weight":null}]
+java.sql.SQLException: 错误: 重复键违反唯一约束"wind_task_actor_pkey"
+  详细：键值"(task_actor_id)=(10003)" 已经存在 Query:  insert into wind_task_actor(task_id,task_actor_id,actor_variable)values(?,?,?);  Parameters: [6066e8b158f541c5bc35c2742ab76e89, 10003, {"userId":"10003","userName":"周三","nickName":null,"status":null,"group":null,"idCard":null,"mobilePhone":null,"officePhone":null,"email":null,"gender":null,"job":null,"hireDate":null,"age":null,"height":null,"qq":null,"boss":null,"company":null,"school":null,"local":null,"homeTown":null,"birthday":null,"remark":null,"description":null,"weight":null}]
+	at org.apache.commons.dbutils.AbstractQueryRunner.rethrow(AbstractQueryRunner.java:527) ~[commons-dbutils-1.7.jar:1.7]
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:531) ~[commons-dbutils-1.7.jar:1.7]
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:444) ~[commons-dbutils-1.7.jar:1.7]
+	at com.bcx.wind.workflow.jdbc.JdbcAccess.saveOrUpdate(JdbcAccess.java:58) ~[classes/:na]
+	at com.bcx.wind.workflow.AbstractAccess.insertTaskActor(AbstractAccess.java:658) [classes/:na]
+	at com.bcx.wind.workflow.impl.TaskServiceImpl.addActor(TaskServiceImpl.java:158) [classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.buildTask(TaskHandler.java:94) [classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.handler(TaskHandler.java:43) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revokeOperate(RevokeExecutor.java:122) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revoke(RevokeExecutor.java:93) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.executor(RevokeExecutor.java:48) [classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:139) [classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:30:59.852 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.jdbc.JdbcAccess : 62 ] - 错误: 当前事务被终止, 事务块结束之前的查询被忽略 Query:  insert into wind_active_history(id,task_id,task_name,task_display_name,process_id,order_id,process_name,process_display_name,operate,suggest,approve_time,actor_id,actor_name,approve_id,approve_name,create_time,approve_user_variable,task_type,system,submit_user_variable) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); Parameters: [be32d3fcdd0041b4877bf1db49e00171, 6066e8b158f541c5bc35c2742ab76e89, edit, 起草, f98357770c584f30bf0211ad088a004a, 0a3ce374184f496dbb7e9dc085bf35cc, holiday, 请假流程模型, null, null, null, null, null, null, null, 2019-02-26 19:30:59, [{"nodeId":"edit","approveUsers":[{"userId":"10003","userName":"周三","nickName":null,"status":null,"group":null,"idCard":null,"mobilePhone":null,"officePhone":null,"email":null,"gender":null,"job":null,"hireDate":null,"age":null,"height":null,"qq":null,"boss":null,"company":null,"school":null,"local":null,"homeTown":null,"birthday":null,"remark":null,"description":null,"weight":null}]}], any, null, null]
+java.sql.SQLException: 错误: 当前事务被终止, 事务块结束之前的查询被忽略 Query:  insert into wind_active_history(id,task_id,task_name,task_display_name,process_id,order_id,process_name,process_display_name,operate,suggest,approve_time,actor_id,actor_name,approve_id,approve_name,create_time,approve_user_variable,task_type,system,submit_user_variable) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); Parameters: [be32d3fcdd0041b4877bf1db49e00171, 6066e8b158f541c5bc35c2742ab76e89, edit, 起草, f98357770c584f30bf0211ad088a004a, 0a3ce374184f496dbb7e9dc085bf35cc, holiday, 请假流程模型, null, null, null, null, null, null, null, 2019-02-26 19:30:59, [{"nodeId":"edit","approveUsers":[{"userId":"10003","userName":"周三","nickName":null,"status":null,"group":null,"idCard":null,"mobilePhone":null,"officePhone":null,"email":null,"gender":null,"job":null,"hireDate":null,"age":null,"height":null,"qq":null,"boss":null,"company":null,"school":null,"local":null,"homeTown":null,"birthday":null,"remark":null,"description":null,"weight":null}]}], any, null, null]
+	at org.apache.commons.dbutils.AbstractQueryRunner.rethrow(AbstractQueryRunner.java:527) ~[commons-dbutils-1.7.jar:1.7]
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:531) ~[commons-dbutils-1.7.jar:1.7]
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:444) ~[commons-dbutils-1.7.jar:1.7]
+	at com.bcx.wind.workflow.jdbc.JdbcAccess.saveOrUpdate(JdbcAccess.java:58) ~[classes/:na]
+	at com.bcx.wind.workflow.AbstractAccess.insertActiveHistory(AbstractAccess.java:286) [classes/:na]
+	at com.bcx.wind.workflow.impl.ActiveHistoryServiceImpl.insert(ActiveHistoryServiceImpl.java:55) [classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.createActiveHistory(TaskHandler.java:194) [classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.buildTask(TaskHandler.java:97) [classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.handler(TaskHandler.java:43) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revokeOperate(RevokeExecutor.java:122) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revoke(RevokeExecutor.java:93) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.executor(RevokeExecutor.java:48) [classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:139) [classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:31:31.637 [ main ] - [ INFO  ] [ com.bcx.wind.workflow.impl.DefaultWorkflowSession : 388 ] - null
+java.lang.NullPointerException: null
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.addRevokeTaskIdToOrder(TaskHandler.java:116) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.buildTask(TaskHandler.java:101) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.handler(TaskHandler.java:43) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revokeOperate(RevokeExecutor.java:122) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revoke(RevokeExecutor.java:93) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.executor(RevokeExecutor.java:48) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:139) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) ~[classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:32:03.216 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 19:32:11.110 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.jdbc.JdbcAccess : 62 ] - 错误: 重复键违反唯一约束"wind_task_actor_pkey"
+  详细：键值"(task_actor_id)=(10003)" 已经存在 Query:  insert into wind_task_actor(task_id,task_actor_id,actor_variable)values(?,?,?);  Parameters: [23d997e7eb4c46d9b446ec384a7849eb, 10003, {"userId":"10003","userName":"周三","nickName":null,"status":null,"group":null,"idCard":null,"mobilePhone":null,"officePhone":null,"email":null,"gender":null,"job":null,"hireDate":null,"age":null,"height":null,"qq":null,"boss":null,"company":null,"school":null,"local":null,"homeTown":null,"birthday":null,"remark":null,"description":null,"weight":null}]
+java.sql.SQLException: 错误: 重复键违反唯一约束"wind_task_actor_pkey"
+  详细：键值"(task_actor_id)=(10003)" 已经存在 Query:  insert into wind_task_actor(task_id,task_actor_id,actor_variable)values(?,?,?);  Parameters: [23d997e7eb4c46d9b446ec384a7849eb, 10003, {"userId":"10003","userName":"周三","nickName":null,"status":null,"group":null,"idCard":null,"mobilePhone":null,"officePhone":null,"email":null,"gender":null,"job":null,"hireDate":null,"age":null,"height":null,"qq":null,"boss":null,"company":null,"school":null,"local":null,"homeTown":null,"birthday":null,"remark":null,"description":null,"weight":null}]
+	at org.apache.commons.dbutils.AbstractQueryRunner.rethrow(AbstractQueryRunner.java:527) ~[commons-dbutils-1.7.jar:1.7]
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:531) ~[commons-dbutils-1.7.jar:1.7]
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:444) ~[commons-dbutils-1.7.jar:1.7]
+	at com.bcx.wind.workflow.jdbc.JdbcAccess.saveOrUpdate(JdbcAccess.java:58) ~[classes/:na]
+	at com.bcx.wind.workflow.AbstractAccess.insertTaskActor(AbstractAccess.java:658) [classes/:na]
+	at com.bcx.wind.workflow.impl.TaskServiceImpl.addActor(TaskServiceImpl.java:158) [classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.buildTask(TaskHandler.java:94) [classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.handler(TaskHandler.java:43) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revokeOperate(RevokeExecutor.java:122) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revoke(RevokeExecutor.java:93) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.executor(RevokeExecutor.java:48) [classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:139) [classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:32:11.124 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.jdbc.JdbcAccess : 62 ] - 错误: 当前事务被终止, 事务块结束之前的查询被忽略 Query:  insert into wind_active_history(id,task_id,task_name,task_display_name,process_id,order_id,process_name,process_display_name,operate,suggest,approve_time,actor_id,actor_name,approve_id,approve_name,create_time,approve_user_variable,task_type,system,submit_user_variable) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); Parameters: [0b94bfb5d9d74d0bb39beeb089fca33c, 23d997e7eb4c46d9b446ec384a7849eb, edit, 起草, f98357770c584f30bf0211ad088a004a, 0a3ce374184f496dbb7e9dc085bf35cc, holiday, 请假流程模型, null, null, null, null, null, null, null, 2019-02-26 19:32:11, [{"nodeId":"edit","approveUsers":[{"userId":"10003","userName":"周三","nickName":null,"status":null,"group":null,"idCard":null,"mobilePhone":null,"officePhone":null,"email":null,"gender":null,"job":null,"hireDate":null,"age":null,"height":null,"qq":null,"boss":null,"company":null,"school":null,"local":null,"homeTown":null,"birthday":null,"remark":null,"description":null,"weight":null}]}], any, null, null]
+java.sql.SQLException: 错误: 当前事务被终止, 事务块结束之前的查询被忽略 Query:  insert into wind_active_history(id,task_id,task_name,task_display_name,process_id,order_id,process_name,process_display_name,operate,suggest,approve_time,actor_id,actor_name,approve_id,approve_name,create_time,approve_user_variable,task_type,system,submit_user_variable) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); Parameters: [0b94bfb5d9d74d0bb39beeb089fca33c, 23d997e7eb4c46d9b446ec384a7849eb, edit, 起草, f98357770c584f30bf0211ad088a004a, 0a3ce374184f496dbb7e9dc085bf35cc, holiday, 请假流程模型, null, null, null, null, null, null, null, 2019-02-26 19:32:11, [{"nodeId":"edit","approveUsers":[{"userId":"10003","userName":"周三","nickName":null,"status":null,"group":null,"idCard":null,"mobilePhone":null,"officePhone":null,"email":null,"gender":null,"job":null,"hireDate":null,"age":null,"height":null,"qq":null,"boss":null,"company":null,"school":null,"local":null,"homeTown":null,"birthday":null,"remark":null,"description":null,"weight":null}]}], any, null, null]
+	at org.apache.commons.dbutils.AbstractQueryRunner.rethrow(AbstractQueryRunner.java:527) ~[commons-dbutils-1.7.jar:1.7]
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:531) ~[commons-dbutils-1.7.jar:1.7]
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:444) ~[commons-dbutils-1.7.jar:1.7]
+	at com.bcx.wind.workflow.jdbc.JdbcAccess.saveOrUpdate(JdbcAccess.java:58) ~[classes/:na]
+	at com.bcx.wind.workflow.AbstractAccess.insertActiveHistory(AbstractAccess.java:286) [classes/:na]
+	at com.bcx.wind.workflow.impl.ActiveHistoryServiceImpl.insert(ActiveHistoryServiceImpl.java:55) [classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.createActiveHistory(TaskHandler.java:197) [classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.buildTask(TaskHandler.java:97) [classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.handler(TaskHandler.java:43) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revokeOperate(RevokeExecutor.java:122) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revoke(RevokeExecutor.java:93) [classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.executor(RevokeExecutor.java:48) [classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:139) [classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:32:36.547 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.jdbc.JdbcAccess : 62 ] - 错误: 当前事务被终止, 事务块结束之前的查询被忽略 Query:  update wind_order_instance set process_id=? , status=? , create_user=?, create_time=?, expire_time=?, parent_id=?, version=version+1, variable=?, data=? , system=? where id=? and version=?;  Parameters: [f98357770c584f30bf0211ad088a004a, run, 10005, 2019-02-26 18:49:30, null, null, {"taskApproveUser":{"edit":[{"userId":"10003","userName":"周三","nickName":null,"status":null,"group":null,"idCard":null,"mobilePhone":null,"officePhone":null,"email":null,"gender":null,"job":null,"hireDate":null,"age":null,"height":null,"qq":null,"boss":null,"company":null,"school":null,"local":null,"homeTown":null,"birthday":null,"remark":null,"description":null,"weight":null}]},"lastTaskSubmitTaskNode":"edit","revokeVariable":{"revokeNode":"edit","newTaskId":["f1cffd70bab74e17841733a970a04aa9"]}}, {}, null, 0a3ce374184f496dbb7e9dc085bf35cc, 2]
+java.sql.SQLException: 错误: 当前事务被终止, 事务块结束之前的查询被忽略 Query:  update wind_order_instance set process_id=? , status=? , create_user=?, create_time=?, expire_time=?, parent_id=?, version=version+1, variable=?, data=? , system=? where id=? and version=?;  Parameters: [f98357770c584f30bf0211ad088a004a, run, 10005, 2019-02-26 18:49:30, null, null, {"taskApproveUser":{"edit":[{"userId":"10003","userName":"周三","nickName":null,"status":null,"group":null,"idCard":null,"mobilePhone":null,"officePhone":null,"email":null,"gender":null,"job":null,"hireDate":null,"age":null,"height":null,"qq":null,"boss":null,"company":null,"school":null,"local":null,"homeTown":null,"birthday":null,"remark":null,"description":null,"weight":null}]},"lastTaskSubmitTaskNode":"edit","revokeVariable":{"revokeNode":"edit","newTaskId":["f1cffd70bab74e17841733a970a04aa9"]}}, {}, null, 0a3ce374184f496dbb7e9dc085bf35cc, 2]
+	at org.apache.commons.dbutils.AbstractQueryRunner.rethrow(AbstractQueryRunner.java:527) ~[commons-dbutils-1.7.jar:1.7]
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:531) ~[commons-dbutils-1.7.jar:1.7]
+	at org.apache.commons.dbutils.QueryRunner.update(QueryRunner.java:444) ~[commons-dbutils-1.7.jar:1.7]
+	at com.bcx.wind.workflow.jdbc.JdbcAccess.saveOrUpdate(JdbcAccess.java:58) ~[classes/:na]
+	at com.bcx.wind.workflow.AbstractAccess.updateOrderInstance(AbstractAccess.java:443) [classes/:na]
+	at com.bcx.wind.workflow.impl.OrderServiceImpl.update(OrderServiceImpl.java:78) [classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.updateOrderAndTask(BaseExecutor.java:186) [classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:140) [classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 19:34:20.739 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 19:57:59.010 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@209da20d
+2019-02-26 19:58:02.425 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:58:02.551 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:58:02.582 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:58:02.609 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:58:02.648 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:58:02.695 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:58:02.708 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:58:02.716 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:58:02.727 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:58:02.758 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:58:02.777 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:58:02.788 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 19:59:23.266 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 20:02:11.082 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@209da20d
+2019-02-26 20:02:13.469 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.535 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.557 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.576 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.596 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.615 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.624 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.633 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.642 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.654 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.663 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.681 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:02:13.749 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.helper.Assert : 28 ] - 对不起【周三】,流程【周三】中暂时没有您的任务
+2019-02-26 20:02:13.773 [ main ] - [ INFO  ] [ com.bcx.wind.workflow.impl.DefaultWorkflowSession : 140 ] - 对不起【周三】,流程【周三】中暂时没有您的任务
+com.bcx.wind.workflow.exception.WorkflowException: 对不起【周三】,流程【周三】中暂时没有您的任务
+	at com.bcx.wind.workflow.helper.Assert.notEmpty(Assert.java:30) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.getCurTaskByActorId(BaseExecutor.java:306) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.buildCurTask(BaseExecutor.java:293) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.buildWorkflow(BaseExecutor.java:370) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.SubmitExecutor.executor(SubmitExecutor.java:21) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.submit(BaseExecutor.java:86) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.submit(RoutingExecutor.java:65) ~[classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.submit(DefaultWorkflowSession.java:138) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.submit(DefaultWorkflowSession.java:177) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionSubmitTest.submitOne(WorkflowSessionSubmitTest.java:220) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 20:03:24.411 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@209da20d
+2019-02-26 20:03:26.381 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:03:26.456 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:03:26.479 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:03:26.503 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:03:26.529 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:03:26.543 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:03:26.556 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:03:26.566 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:03:26.574 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:03:26.587 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:03:26.605 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:03:26.619 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:04:20.622 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 20:05:54.539 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@209da20d
+2019-02-26 20:05:56.375 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:05:56.440 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:05:56.458 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:05:56.476 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:05:56.518 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:05:56.531 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:05:56.539 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:05:56.548 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:05:56.556 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:05:56.565 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:05:56.578 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:05:56.591 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:06:34.474 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 20:08:09.257 [ main ] - [ INFO  ] [ com.bcx.wind.workflow.impl.DefaultWorkflowSession : 388 ] - null
+java.lang.NullPointerException: null
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.buildTask(TaskHandler.java:66) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.handler.TaskHandler.handler(TaskHandler.java:43) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revokeOperate(RevokeExecutor.java:129) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.revoke(RevokeExecutor.java:95) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RevokeExecutor.executor(RevokeExecutor.java:47) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.revoke(BaseExecutor.java:139) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.revoke(RoutingExecutor.java:98) ~[classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:386) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.revoke(DefaultWorkflowSession.java:367) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionRevokeTest.revoke(WorkflowSessionRevokeTest.java:22) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 20:14:13.533 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0
+2019-02-26 20:15:06.637 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@209da20d
+2019-02-26 20:15:08.487 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:15:08.585 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:15:08.615 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:15:08.652 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:15:08.676 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:15:08.703 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:15:08.717 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:15:08.730 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:15:08.740 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:15:08.757 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:15:08.773 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:15:08.781 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:16:09.212 [ main ] - [ INFO  ] [ com.bcx.wind.workflow.impl.DefaultWorkflowSession : 140 ] - null
+java.lang.NullPointerException: null
+	at com.bcx.wind.workflow.core.flow.TaskNode.addTaskApproveUserToOrderVariable(TaskNode.java:453) ~[classes/:na]
+	at com.bcx.wind.workflow.core.flow.TaskNode.addTaskApproveUserToOrderVariable(TaskNode.java:410) ~[classes/:na]
+	at com.bcx.wind.workflow.core.flow.TaskNode.simpleExec(TaskNode.java:291) ~[classes/:na]
+	at com.bcx.wind.workflow.core.flow.TaskNode.complete(TaskNode.java:149) ~[classes/:na]
+	at com.bcx.wind.workflow.core.flow.TaskNode.executor(TaskNode.java:86) ~[classes/:na]
+	at com.bcx.wind.workflow.core.flow.BaseNode.execute(BaseNode.java:119) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.SubmitExecutor.exec(SubmitExecutor.java:32) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.SubmitExecutor.executor(SubmitExecutor.java:22) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.BaseExecutor.submit(BaseExecutor.java:86) ~[classes/:na]
+	at com.bcx.wind.workflow.executor.RoutingExecutor.submit(RoutingExecutor.java:65) ~[classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.submit(DefaultWorkflowSession.java:138) [classes/:na]
+	at com.bcx.wind.workflow.impl.DefaultWorkflowSession.submit(DefaultWorkflowSession.java:177) [classes/:na]
+	at com.bcx.wind.workflow.impl.WorkflowSessionSubmitTest.submitOne(WorkflowSessionSubmitTest.java:220) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+2019-02-26 20:18:44.525 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@209da20d
+2019-02-26 20:18:46.716 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:18:46.787 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:18:46.807 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:18:46.836 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:18:46.856 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:18:46.868 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:18:46.878 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:18:46.886 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:18:46.895 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:18:46.910 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:18:46.933 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:18:46.945 [ main ] - [ DEBUG ] [ com.bcx.wind.workflow.parser.ProcessBuilder : 94 ] - get process from cache success! 
+2019-02-26 20:19:39.979 [ main ] - [ DEBUG ] [ c.b.w.w.dataSource.dataSource.WorkflowDataSource : 332 ] - pop connection success ! org.postgresql.jdbc.PgConnection@bae7dc0

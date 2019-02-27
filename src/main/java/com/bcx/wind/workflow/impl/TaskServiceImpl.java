@@ -5,6 +5,7 @@ import com.bcx.wind.workflow.AccessService;
 import com.bcx.wind.workflow.access.FlowPage;
 import com.bcx.wind.workflow.access.QueryFilter;
 import com.bcx.wind.workflow.core.TaskService;
+import com.bcx.wind.workflow.core.constant.TaskStatus;
 import com.bcx.wind.workflow.core.pojo.DefaultUser;
 import com.bcx.wind.workflow.core.pojo.User;
 import com.bcx.wind.workflow.entity.TaskActor;
@@ -195,6 +196,13 @@ public class TaskServiceImpl extends AccessService implements TaskService {
         return getUsersByActorVariable(actors);
     }
 
+    @Override
+    public List<TaskActor> getTaskActorByActorId(String userId) {
+        Assert.hasEmpty("search taskActor by actorId, but actorId is null! search fail",userId);
+        QueryFilter filter = new QueryFilter()
+                .setTaskActorId(new String[]{userId});
+        return access.selectTaskActorList(filter);
+    }
 
     private List<DefaultUser>  getUsersByActorVariable(List<TaskActor> actors){
         List<DefaultUser> users = new LinkedList<>();
@@ -217,6 +225,34 @@ public class TaskServiceImpl extends AccessService implements TaskService {
         Assert.notEmpty(MessageHelper.getMsg(w002,TASK_INSTANCE),taskId);
 
         return access.getTaskInstanceById(taskId);
+    }
+
+    @Override
+    public TaskInstance getRunTaskById(String taskId) {
+        Assert.notEmpty(MessageHelper.getMsg(w002,TASK_INSTANCE),taskId);
+
+        QueryFilter filter = new QueryFilter()
+                .setTaskId(taskId)
+                .setStatus(TaskStatus.RUN);
+        List<TaskInstance> instances = access.selectTaskInstanceList(filter);
+        if(!ObjectHelper.isEmpty(instances)){
+            return instances.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public TaskInstance getStopTaskById(String taskId) {
+        Assert.notEmpty(MessageHelper.getMsg(w002,TASK_INSTANCE),taskId);
+
+        QueryFilter filter = new QueryFilter()
+                .setTaskId(taskId)
+                .setStatus(TaskStatus.STOP);
+        List<TaskInstance> instances = access.selectTaskInstanceList(filter);
+        if(!ObjectHelper.isEmpty(instances)){
+            return instances.get(0);
+        }
+        return null;
     }
 
     @Override

@@ -48,26 +48,6 @@ public class RevokeExecutor extends BaseExecutor {
     }
 
 
-
-    private void buildMainOrder(){
-        List<String> businessIds = variable().getBusinessId();
-        QueryFilter filter = new QueryFilter()
-                .setBusinessId(businessIds);
-        if(!ObjectHelper.isEmpty(variable().getSystem())){
-            filter.setSystem(variable().getSystem());
-        }
-        List<OrderBusiness> businesses = engine().runtimeService().orderService().
-                queryOrderBusiness(filter);
-        if(!ObjectHelper.isEmpty(businesses)){
-            OrderInstance orderInstance = engine().runtimeService().orderService().queryOne(businesses.get(0).getOrderId());
-            this.actuator.setOrderInstance(orderInstance);
-            this.actuator.getWorkflow().setOrderId(orderInstance.getId()).setOrderInstance(orderInstance);
-            return;
-        }
-        throw new WorkflowException(MessageHelper.getMsg(w026));
-    }
-
-
     @SuppressWarnings("unchecked")
     private  void  revoke(){
         //获取撤销信息

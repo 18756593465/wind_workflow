@@ -2,6 +2,7 @@ package com.bcx.wind.workflow.executor;
 
 import com.bcx.wind.workflow.core.Actuator;
 import com.bcx.wind.workflow.core.constant.NodeName;
+import com.bcx.wind.workflow.core.constant.WorkflowOperateConstant;
 import com.bcx.wind.workflow.core.flow.ScribeTaskNode;
 import com.bcx.wind.workflow.core.flow.TaskModel;
 import com.bcx.wind.workflow.core.flow.TaskNode;
@@ -33,11 +34,25 @@ public class RejectExecutor extends BaseExecutor {
         //校验驳回节点
         addSubmitNode();
         //构建流程实例，获取当前任务
-        buildWorkflow();
+        buildFlow();
         //校验是否可以驳回
         checkCanReject();
         //执行提交（这里的提交可以理解为驳回）
         new SubmitExecutor(this.actuator).submit(variable());
+    }
+
+    private void buildFlow(){
+        //查询流程实例
+        buildOrderInstance();
+
+        this.actuator.getWorkflow().setVariable(variable()).setApproveUsers(variable().getApproveUsers())
+                .setSystem(variable().getSystem())
+                .setBusinessId(variable().getBusinessId())
+                .setUser(variable().getUser());
+
+        //当前任务
+        buildCurTask();
+
     }
 
 

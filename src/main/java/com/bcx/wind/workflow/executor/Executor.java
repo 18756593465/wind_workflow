@@ -1,6 +1,7 @@
 package com.bcx.wind.workflow.executor;
 
 import com.bcx.wind.workflow.core.handler.*;
+import com.bcx.wind.workflow.core.pojo.TransferVariable;
 import com.bcx.wind.workflow.core.pojo.Workflow;
 import com.bcx.wind.workflow.core.pojo.WorkflowVariable;
 import com.bcx.wind.workflow.executor.handler.ScribeTaskHandler;
@@ -125,8 +126,6 @@ public interface Executor {
      * @return          workflow
      */
     <T extends CompleteHandler>Workflow  complete(WorkflowVariable variable,T handler);
-
-
 
 
 }

@@ -166,7 +166,7 @@ public class WorkflowSessionSubmitTest extends BaseTest {
 
         //创建工作流
         DefaultUser user = new DefaultUser()
-                .setUserId("10005")
+                .setUserId("10003")
                 .setUserName("张三");
         List<String> businessIds = new LinkedList<>();
         businessIds.add("00001");
